@@ -1,0 +1,1221 @@
+<!doctype html>
+<html ⚡4email data-css-strict>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <style amp4email-boilerplate>
+      body {
+        visibility: hidden;
+      }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <style amp-custom>
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      body {
+        Margin: 0;
+        padding: 0;
+      }
+      td {
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+      }
+      .mob-miwn {
+        min-width: 320px;
+      }
+      .mail_preheader {
+        display: none;
+        color: transparent;
+      }
+      @media only screen and (max-width: 850px) {
+        .col {
+          max-width: 100%;
+        }
+        .col img {
+          max-width: 100%;
+        }
+      }
+      @media only screen and (max-width:560px) {
+        .mob-miwn {
+          min-width: 320px;
+        }
+        .mob-p0 {
+          padding: 0;
+        }
+        .mob-br0 {
+          border-radius: 0;
+        }
+        .mob-w100 {
+          width: 100%;
+          max-width: none;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .mob-dn {
+          display: none;
+        }
+        .mob-db {
+          display: block;
+        }
+        .mob-tac {
+          text-align: center;
+        }
+        .mob-tal {
+          text-align: left;
+        }
+        .mob-hauto {
+          height: auto;
+        }
+        .mob-pb10 {
+          padding-bottom: 10px;
+        }
+        u+.body .gmail-blend-screen {
+          background: #000000;
+          mix-blend-mode: screen;
+        }
+        u+.body .gmail-blend-difference {
+          background: #000000;
+          mix-blend-mode: difference;
+        }
+        u+.body .gmail-blend-screen-g {
+          background: #171717;
+          mix-blend-mode: screen;
+        }
+        u+.body .gmail-blend-difference-g {
+          background: #171717;
+          mix-blend-mode: difference;
+        }
+      }
+      .cards-td {
+        padding: 215px 0 0 0;
+      }
+      .cards-canvas {
+        position: relative;
+        width: 100%;
+        max-width: 940px;
+        height: 2559px;
+        margin: 0 auto;
+      }
+      .bortle {
+        position: absolute;
+        width: 58.7234%;
+        box-sizing: border-box;
+        font-family: Arial;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        letter-spacing: 0.64px;
+        padding-bottom: 11px;
+        border-bottom: 1px dashed #FFFFFF;
+      }
+      .bortle-l {
+        left: 0;
+        padding-left: 23px;
+        text-align: left;
+      }
+      .bortle-r {
+        left: 41.2766%;
+        padding-right: 23px;
+        text-align: right;
+      }
+      .card-shell {
+        position: absolute;
+        z-index: 2;
+        text-align: left;
+        background-color: #141414;
+        background-image: url('https://storage.dashamail.ru/files/169038/iceberg_26/card-noise.png');
+        background-repeat: repeat;
+        border: 1px solid #818181;
+        border-radius: 8px;
+      }
+      .glow-cyan {
+        box-shadow: 0 0 20px 4px rgba(77,214,223,.40), 0 0 46px 10px rgba(77,214,223,.18);
+      }
+      .glow-amber {
+        box-shadow: 0 0 20px 4px rgba(255,159,0,.40), 0 0 46px 10px rgba(255,159,0,.18);
+      }
+      .glow-azure {
+        box-shadow: 0 0 20px 4px rgba(82,157,255,.40), 0 0 46px 10px rgba(82,157,255,.18);
+      }
+      .card-shell.is-open {
+        width: 565px;
+        z-index: 10;
+        box-shadow: 0 0 260px 170px rgba(0,0,0,.82);
+      }
+      .card-badge {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        height: 12px;
+        padding: 0 5px;
+        background: #B2E0E7;
+        border-radius: 0 0 4px 4px;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 8px;
+        line-height: 12px;
+        color: #3C3C3C;
+        letter-spacing: 0.32px;
+        white-space: nowrap;
+      }
+      .card-head {
+        position: relative;
+        box-sizing: border-box;
+        padding: 17px 10px 17px 10px;
+        cursor: pointer;
+      }
+      .card-title {
+        display: inline-block;
+        padding-right: 48px;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        letter-spacing: 0.64px;
+        white-space: nowrap;
+      }
+      .card-chev {
+        position: absolute;
+        top: 17px;
+        right: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: rgba(178,224,231,.5);
+        transition: transform .25s ease;
+      }
+      .card-chev.is-open {
+        transform: rotate(180deg);
+      }
+      .card-chev-arrow {
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin-top: -4px;
+        border-right: 2px solid #000000;
+        border-bottom: 2px solid #000000;
+        transform: rotate(45deg);
+      }
+      .card-divider {
+        margin: 0 12px;
+        border-top: 1px dashed rgba(178,224,231,.57);
+      }
+      .card-reveal {
+        max-height: 0;
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity .3s ease;
+      }
+      .card-reveal.is-open {
+        max-height: 3000px;
+        width: auto;
+        opacity: 1;
+      }
+      .card-body {
+        padding: 16px 11px 0 11px;
+      }
+      .fact {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        letter-spacing: 0.64px;
+        padding-bottom: 12px;
+      }
+      .k1 {
+        top: 100px;
+        left: 12.5532%;
+      }
+      .k2 {
+        top: 145px;
+        left: 60.3191%;
+      }
+      .k3 {
+        top: 330px;
+        left: 7.6596%;
+      }
+      .k4 {
+        top: 440px;
+        left: 46.9149%;
+      }
+      .k5 {
+        top: 760px;
+        left: 10.2128%;
+      }
+      .k6 {
+        top: 800px;
+        left: 57.9787%;
+      }
+      .k7 {
+        top: 990px;
+        left: 18.6170%;
+      }
+      .k8 {
+        top: 1090px;
+        left: 52.9787%;
+      }
+      .k9 {
+        top: 1420px;
+        left: 9.3617%;
+      }
+      .k10 {
+        top: 1455px;
+        left: 55.7447%;
+      }
+      .k11 {
+        top: 1650px;
+        left: 20.8511%;
+      }
+      .k12 {
+        top: 1980px;
+        left: 11.7021%;
+      }
+      .k13 {
+        top: 2035px;
+        left: 45.7447%;
+      }
+      .k14 {
+        top: 2450px;
+        left: 15.1064%;
+      }
+      .k15 {
+        top: 2500px;
+        left: 53.7234%;
+      }
+      .k2.is-open {
+        left: auto;
+        right: 8.5106%;
+      }
+      .k4.is-open {
+        left: auto;
+        right: 22.0213%;
+      }
+      .k6.is-open {
+        left: auto;
+        right: 17.3404%;
+      }
+      .k8.is-open {
+        left: auto;
+        right: 28.0851%;
+      }
+      .k10.is-open {
+        left: auto;
+        right: 22.6596%;
+      }
+      .k13.is-open {
+        left: auto;
+        right: 16.0638%;
+      }
+      .k15.is-open {
+        left: auto;
+        right: 27.5532%;
+      }
+      .k1.is-open .card-head {
+        width: 228px;
+      }
+      .k2.is-open .card-head {
+        width: 291px;
+        margin-left: 274px;
+      }
+      .k3.is-open .card-head {
+        width: 238px;
+      }
+      .k4.is-open .card-head {
+        width: 290px;
+        margin-left: 275px;
+      }
+      .k5.is-open .card-head {
+        width: 206px;
+      }
+      .k6.is-open .card-head {
+        width: 230px;
+        margin-left: 335px;
+      }
+      .k7.is-open .card-head {
+        width: 241px;
+      }
+      .k8.is-open .card-head {
+        width: 176px;
+        margin-left: 389px;
+      }
+      .k9.is-open .card-head {
+        width: 208px;
+      }
+      .k10.is-open .card-head {
+        width: 201px;
+        margin-left: 364px;
+      }
+      .k11.is-open .card-head {
+        width: 175px;
+      }
+      .k12.is-open .card-head {
+        width: 148px;
+      }
+      .k13.is-open .card-head {
+        width: 357px;
+        margin-left: 208px;
+      }
+      .k14.is-open .card-head {
+        width: 223px;
+      }
+      .k15.is-open .card-head {
+        width: 174px;
+        margin-left: 391px;
+      }
+      .promo {
+        padding: 18px 10px 15px 10px;
+      }
+      .promo-t {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        background: #262626;
+        border: 1px solid #8A8A8A;
+        border-radius: 10px;
+      }
+      .promo-l {
+        padding: 20px 22px 20px 10px;
+      }
+      .promo-r {
+        width: 197px;
+        padding: 18px 10px 20px 0;
+      }
+      .promo-head {
+        display: block;
+      }
+      .promo-txt {
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 20px;
+        color: #FFFFFF;
+        letter-spacing: 0.56px;
+        padding-top: 14px;
+      }
+      .promo-txt2 {
+        padding-top: 16px;
+      }
+      .pic-a {
+        width: 139px;
+        padding: 16px 22px 0 0;
+      }
+      .pic-b {
+        width: 139px;
+        padding: 16px 0 0 0;
+      }
+      .pic {
+        border-radius: 10px;
+      }
+      .promo-row {
+        padding-top: 14px;
+      }
+      .pill {
+        display: inline-block;
+        border: 1px solid #C99F6C;
+        padding: 0 14px;
+        color: #C99F6C;
+        border-radius: 24px;
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 0.56px;
+        white-space: nowrap;
+      }
+      .btn-gold {
+        display: inline-block;
+        background-color: #C99F6C;
+        color: #FFFFFF;
+        border-radius: 24px;
+        padding: 0 24px;
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 40px;
+        font-weight: bold;
+        letter-spacing: 0.56px;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .pitch-td {
+        padding: 222px 20px 0 20px;
+      }
+      .pitch {
+        width: 100%;
+        max-width: 700px;
+        border-collapse: separate;
+        border-spacing: 0;
+        background-color: #0F0F10;
+        background-image: url('https://storage.dashamail.ru/files/169038/iceberg_26/new_finalbg.png');
+        background-repeat: repeat;
+        border: 1px solid #686767;
+        border-radius: 16px;
+      }
+      .pitch-in {
+        padding: 35px 0 42px 0;
+      }
+      .pitch-p {
+        font-family: Arial;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        letter-spacing: 0.64px;
+        text-align: center;
+        padding: 27px 53px 0 53px;
+      }
+      .pitch-narrow {
+        padding: 36px 85px 0 85px;
+      }
+      .gold {
+        color: #C99F6C;
+      }
+      .pitch-pics {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 18px 0;
+      }
+      .pp {
+        width: 33.33%;
+        padding: 36px 0 0 0;
+      }
+      .pp-last {
+        padding-right: 0;
+      }
+      .pitch-btns {
+        padding-top: 43px;
+        text-align: center;
+      }
+      .btn-wide {
+        box-sizing: border-box;
+        width: 244px;
+        padding: 0;
+        margin: 0 12px;
+      }
+      .btn-ghost {
+        display: inline-block;
+        background-color: #272727;
+        border: 1px solid #C99F6C;
+        color: #FFFFFF;
+        border-radius: 24px;
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 43px;
+        font-weight: bold;
+        letter-spacing: 0.56px;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      @media only screen and (max-width:939px) {
+        .cards-td {
+          padding: 40px 0 0 0;
+        }
+        .cards-canvas {
+          height: auto;
+        }
+        .bortle {
+          position: static;
+          width: auto;
+          margin: 0 0 36px 0;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .bortle-l {
+          text-align: left;
+        }
+        .bortle-r {
+          text-align: right;
+        }
+        .card-shell {
+          position: relative;
+          top: auto;
+          left: auto;
+          right: auto;
+          display: table;
+          width: auto;
+          max-width: 440px;
+          margin: 0 0 56px 0;
+        }
+        .card-shell.is-open {
+          left: auto;
+          right: auto;
+          display: block;
+          width: 565px;
+          max-width: 565px;
+          box-shadow: none;
+        }
+        .card-shell.is-open .card-head {
+          width: auto;
+          margin-left: 0;
+        }
+        .card-title {
+          white-space: normal;
+        }
+        .k1 {
+          margin-left: 34px;
+          margin-right: auto;
+        }
+        .k2 {
+          margin-left: auto;
+          margin-right: 16px;
+        }
+        .k3 {
+          margin-left: 16px;
+          margin-right: auto;
+        }
+        .k4 {
+          margin-left: auto;
+          margin-right: 42px;
+        }
+        .k5 {
+          margin-left: 25px;
+          margin-right: auto;
+        }
+        .k6 {
+          margin-left: auto;
+          margin-right: 24px;
+        }
+        .k7 {
+          margin-left: 56px;
+          margin-right: auto;
+        }
+        .k8 {
+          margin-left: auto;
+          margin-right: 40px;
+        }
+        .k9 {
+          margin-left: 22px;
+          margin-right: auto;
+        }
+        .k10 {
+          margin-left: auto;
+          margin-right: 45px;
+        }
+        .k11 {
+          margin-left: 64px;
+          margin-right: auto;
+        }
+        .k12 {
+          margin-left: 31px;
+          margin-right: auto;
+        }
+        .k13 {
+          margin-left: auto;
+          margin-right: 19px;
+        }
+        .k14 {
+          margin-left: 43px;
+          margin-right: auto;
+        }
+        .k15 {
+          margin-left: auto;
+          margin-right: 64px;
+        }
+      }
+      @media only screen and (max-width:700px) {
+        .card-shell.is-open {
+          display: table;
+          width: auto;
+          max-width: 565px;
+        }
+        .promo {
+          padding: 14px 8px 12px 8px;
+        }
+        .promo-t, .promo-t > tbody, .promo-t > tbody > tr {
+          display: block;
+        }
+        .promo-l, .promo-r {
+          display: block;
+          width: auto;
+          padding: 12px 10px;
+        }
+        .promo-l table {
+          width: 100%;
+        }
+        .pic-a {
+          width: 50%;
+          padding: 14px 8px 0 0;
+        }
+        .pic-b {
+          width: 50%;
+          padding: 14px 0 0 0;
+        }
+        .promo-head {
+          max-width: 100%;
+        }
+      }
+      @media only screen and (max-width:560px) {
+        .card-shell {
+          max-width: 84%;
+        }
+        .card-shell.is-open {
+          max-width: 88%;
+        }
+        .bortle {
+          padding-left: 14px;
+          padding-right: 14px;
+        }
+        .k1 {
+          margin-left: 16px;
+          margin-right: auto;
+        }
+        .k2 {
+          margin-left: auto;
+          margin-right: 8px;
+        }
+        .k3 {
+          margin-left: 8px;
+          margin-right: auto;
+        }
+        .k4 {
+          margin-left: auto;
+          margin-right: 20px;
+        }
+        .k5 {
+          margin-left: 12px;
+          margin-right: auto;
+        }
+        .k6 {
+          margin-left: auto;
+          margin-right: 12px;
+        }
+        .k7 {
+          margin-left: 26px;
+          margin-right: auto;
+        }
+        .k8 {
+          margin-left: auto;
+          margin-right: 19px;
+        }
+        .k9 {
+          margin-left: 11px;
+          margin-right: auto;
+        }
+        .k10 {
+          margin-left: auto;
+          margin-right: 21px;
+        }
+        .k11 {
+          margin-left: 30px;
+          margin-right: auto;
+        }
+        .k12 {
+          margin-left: 15px;
+          margin-right: auto;
+        }
+        .k13 {
+          margin-left: auto;
+          margin-right: 10px;
+        }
+        .k14 {
+          margin-left: 20px;
+          margin-right: auto;
+        }
+        .k15 {
+          margin-left: auto;
+          margin-right: 30px;
+        }
+        .pitch-td {
+          padding: 40px 10px 0 10px;
+        }
+        .pitch-in {
+          padding: 24px 16px 30px 16px;
+        }
+        .pitch-p {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .pitch-pics, .pitch-pics > tbody, .pitch-pics > tbody > tr {
+          display: block;
+        }
+        .pp {
+          display: block;
+          width: auto;
+          padding: 16px 0 0 0;
+        }
+        .pitch-narrow {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .btn-wide {
+          margin: 0 0 12px 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="body" style="Margin: 0;background-color: #0c0c0c;min-width: 300px;padding: 0;">
+    <div class="notification" align="center" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:null}})" style="word-break: normal;line-height: normal;width: 100%;">
+      <div class="mail_preheader" style="color: transparent;display: none;display: none;height: 0;width: 0;max-width: 0;visibility: hidden;padding: 0;font-size: 0;line-height: 0;">Насколько глубоко вы готовы спуститься? ⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</div>
+      <amp-state id="cards">
+        <script type="application/json">
+          { "open": null }
+        </script>
+      </amp-state>
+      <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;border-spacing: 0;background-color: #0c0c0c;width: 100%;">
+        <tr>
+          <td bgcolor="#0c0c0c" valign="top" align="center" style="padding:20px 0;background-color:#0c0c0c;background-image:url('https://storage.dashamail.ru/files/169038/stars-pattern.png'),linear-gradient(#0c0c0c,#000000);background-repeat:repeat,no-repeat;background-size:400px 400px,100% 100%;" class="mob-p0">
+            <table cellpadding="0" align="center" style="border-collapse: collapse;border-spacing: 0;margin: 0 auto;width: 100%;max-width:940px;" class="mob-miwn">
+              <tr>
+                <td bgcolor="#1d1b1c" style="border-radius:20px;background:linear-gradient(#1d1b1c,#1d1b1c);box-shadow:0 0 30px 8px rgba(161,186,219,.10),0 0 90px 18px rgba(120,160,255,.06);" class="mob-br0">
+                  <table width="100%" align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+                    <tr>
+                      <td bgcolor="#000000" valign="top" style="background-image:url('https://storage.dashamail.ru/files/169038/iceberg_26/space_bg.jpg');background-repeat:no-repeat;background-size:cover;background-position:top center;width:940px;border-radius:20px;" class="mob-br0">
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="center" style="padding:0 10px 0 10px;">
+                              <table align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;max-width:600px;">
+                                <tr>
+                                  <td bgcolor="#0F0F10" align="center" style="text-align: center;padding: 26px 0 0 0;background-color:rgba(15,15,16,.9);">
+                                    <table width="100%" align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;max-width:600px;">
+                                      <tr>
+                                        <td align="center" style="text-align: center;padding: 0 0 0 0;">
+                                          <a href="https://tostars.ru/" target="_blank" style="outline: none;text-decoration: none;">
+                                            <amp-img src="https://storage.dashamail.ru/files/169038/Group_4_13694.png" width="100" height="56" alt="TOSTARS" style="border: 0;height: auto;max-width: 100px;outline: none;text-decoration: none;width: 100%;margin: 0 auto;" layout="responsive"></amp-img>
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td bgcolor="#0F0F10" style="background-color:rgba(15,15,16,.9);border-radius:0 0 20px 20px;">
+                                    <table align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+                                      <tr>
+                                        <td align="center" style="padding:20px 0 30px 0;">
+                                          <div style="display: inline-block;vertical-align: middle;">
+                                            <table cellpadding="0" cellspacing="0" align="center" width="100%">
+                                              <tr>
+                                                <td style="padding:20px 24px 0 24px;">
+                                                  <a href="https://tostars.ru/#all" target="_blank" style="background-color:#E12E35;padding:0 14px 0 14px;color:#FFFFFF;border-radius:30px;display:inline-block;font-family:Helvetica, Arial;font-size: 14px;line-height:26px;font-weight:400;text-align:center;text-decoration:none;white-space:nowrap;"> Хочу в&nbsp;поездку! </a>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </div>
+                                          <div style="display: inline-block;vertical-align: middle;">
+                                            <table cellpadding="0" cellspacing="0" align="center" width="100%">
+                                              <tr>
+                                                <td align="center" style="padding:20px 24px 0 24px;">
+                                                  <a href="https://tostars.ru/onlajn-kurs-po-astronomii-dlya-nachinayushchih" target="_blank" style="text-decoration:none;color: #003AB1;">
+                                                    <span style="color: #FFFFFF;font-family:Arial;font-size: 14px;line-height: 18px;text-decoration: none;white-space:nowrap;">
+                                                      <div class="gmail-blend-screen">
+                                                        <div class="gmail-blend-difference">Онлайн-курс</div>
+                                                      </div>
+                                                    </span>
+                                                  </a>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </div>
+                                          <div style="display: inline-block;vertical-align: middle;display: none;width: 100%;" class="mob-db">&nbsp;</div>
+                                          <div style="display: inline-block;vertical-align: middle;">
+                                            <table cellpadding="0" cellspacing="0" align="center" width="100%">
+                                              <tr>
+                                                <td align="center" style="padding:20px 24px 0 24px;">
+                                                  <a href="https://tostars.ru/shop" target="_blank" style="text-decoration:none;color: #003AB1;">
+                                                    <span style="color: #FFFFFF;font-family:Arial;font-size: 14px;line-height: 18px;text-decoration: none;white-space:nowrap;">
+                                                      <div class="gmail-blend-screen">
+                                                        <div class="gmail-blend-difference">Магазин</div>
+                                                      </div>
+                                                    </span>
+                                                  </a>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </div>
+                                          <div style="display: inline-block;vertical-align: middle;">
+                                            <table cellpadding="0" cellspacing="0" align="center" width="100%">
+                                              <tr>
+                                                <td align="center" style="padding:20px 24px 0 24px;">
+                                                  <a href="https://tostars.ru/about" target="_blank" style="text-decoration:none;color: #003AB1;">
+                                                    <span style="color: #FFFFFF;font-family:Arial;font-size: 14px;line-height: 18px;text-decoration: none;white-space:nowrap;">
+                                                      <div class="gmail-blend-screen">
+                                                        <div class="gmail-blend-difference">О&nbsp;нас</div>
+                                                      </div>
+                                                    </span>
+                                                  </a>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" style="padding:44px 20px 0 20px;">
+                              <table align="center" width="100%" cellspacing="0" cellpadding="0" style="border-spacing: 0;max-width:600px;">
+                                <tr>
+                                  <td bgcolor="#0F0F10" style="border:1px solid #686767;border-bottom:none; border-radius:16px;background-color:rgba(15,15,16,.9);">
+                                    <table align="center" width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+                                      <tr>
+                                        <td align="left" style="padding:24px 30px 0 30px;">
+                                          <span style="font-family:Arial;font-size: 16px;line-height: 24px;font-weight:400;color:#d0d0d0;letter-spacing:0.64px;">
+                                            <div class="gmail-blend-screen">
+                                              <div class="gmail-blend-difference">Ночное небо кажется нам привычным с&nbsp;детства: «Вон тот ковш это Большая Медведица, а&nbsp;те три звезды&nbsp;— пояс Ориона!». <br>Но&nbsp;стоит только заглянуть глубже...</div>
+                                            </div>
+                                          </span>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" style="padding:26px 30px 0 30px;">
+                                          <span style="font-family:Arial;font-size: 16px;line-height: 24px;font-weight:400;color:#d0d0d0;letter-spacing:0.64px;">
+                                            <div class="gmail-blend-screen">
+                                              <div class="gmail-blend-difference">Астрономы измеряют засветку по&nbsp;шкале Бортля. От&nbsp;светлого городского неба до&nbsp;погружения в&nbsp;идеальную темноту. Чем глубже мы спускаемся, тем больше неизвестного и&nbsp;таинственного нам открывается. Что-то из&nbsp;этого даже способно полностью изменить взгляд на&nbsp;Вселенную.</div>
+                                            </div>
+                                          </span>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" style="padding:26px 30px 30px 30px;">
+                                          <span style="font-family:Arial;font-size: 16px;line-height: 24px;font-weight:400;color:#d0d0d0;letter-spacing:0.64px;">
+                                            <div class="gmail-blend-screen">
+                                              <div class="gmail-blend-difference">Начинаем погружение. Готовы?</div>
+                                            </div>
+                                          </span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" class="cards-td">
+                              <div class="cards-canvas">
+                                <div class="bortle bortle-l" style="top:0px;">Бортль 9. Небо городского центра</div>
+                                <div class="card-shell k1" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'proshloe'}})" [class]="cards.open=='proshloe' ? 'card-shell k1 is-open' : 'card-shell k1'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='proshloe'?null:'proshloe')}})"><span class="card-badge">#1</span><span class="card-title">Мы видим прошлое</span> <span class="card-chev" [class]="cards.open=='proshloe' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='proshloe' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">Свет в&nbsp;масштабах космоса распространяется довольно медленно. До&nbsp;ближайшей к&nbsp;нам крупной галактики&nbsp;— Андромеды&nbsp;— он идёт 2,5 миллиона лет. Значит, если оттуда сейчас смотрят на&nbsp;Землю, они видят первых предков человека.</div>
+                                      <div class="fact">И&nbsp;наоборот&nbsp;— прямо сейчас мы можем смотреть на&nbsp;планету с&nbsp;разумной цивилизацией, но&nbsp;узнаем об&nbsp;этом только через миллионы лет.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-shell k2" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'saturn'}})" [class]="cards.open=='saturn' ? 'card-shell k2 is-open' : 'card-shell k2'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='saturn'?null:'saturn')}})"><span class="card-badge">#2</span><span class="card-title">Планета Сатурн легче воды</span> <span class="card-chev" [class]="cards.open=='saturn' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='saturn' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">Сатурн состоит из&nbsp;водорода и&nbsp;гелия&nbsp;— самых лёгких элементов во&nbsp;Вселенной. Из-за&nbsp;этого его плотность ниже, чем у&nbsp;воды: если&nbsp;бы&nbsp;нашёлся бассейн достаточного размера, планета&nbsp;бы&nbsp;плавала на&nbsp;его поверхности.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-shell k3 glow-cyan" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'south'}})" [class]="cards.open=='south' ? 'card-shell k3 glow-cyan is-open' : 'card-shell k3 glow-cyan'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='south'?null:'south')}})"><span class="card-badge">#3</span><span class="card-title">Магеллановы облака</span> <span class="card-chev" [class]="cards.open=='south' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='south' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">Южное небо отличается от&nbsp;нашего. Вместо привычной Полярной звезды&nbsp;— Южный Крест. Центр Млечного Пути виден здесь гораздо ярче. А&nbsp;ещё видны Магеллановы Облака&nbsp;— соседние галактики, которых из&nbsp;России не&nbsp;разглядеть никогда.</div>
+                                    </div>
+                                    <div class="promo">
+                                      <table cellspacing="0" cellpadding="0" class="promo-t">
+                                        <tr>
+                                          <td valign="top" class="promo-l">
+                                            <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/offer-namibia-headline.png" width="276" height="20" layout="fixed" alt="Зато можно в Намибии!" class="promo-head"></amp-img>
+                                            <div class="promo-txt">Астротур среди африканской природы. Ночи на&nbsp;астроферме под&nbsp;одним из&nbsp;самых тёмных небес планеты, сафари в&nbsp;саванне, дюны пустыни Намиб и&nbsp;метеорит Гоба&nbsp;— самый большой из&nbsp;найденных на&nbsp;Земле.</div>
+                                            <table cellspacing="0" cellpadding="0">
+                                              <tr>
+                                                <td class="pic-a">
+                                                  <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/offer-namibia-lion.png" width="139" height="204" layout="responsive" alt="Лев в саванне" class="pic"></amp-img>
+                                                </td>
+                                                <td class="pic-b">
+                                                  <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/offer-namibia-stars.png" width="139" height="204" layout="responsive" alt="Звёздное небо" class="pic"></amp-img>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                          <td valign="top" class="promo-r">
+                                            <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/offer-namibia-tree.png" width="197" height="167" layout="responsive" alt="Пустыня Намиб" class="pic"></amp-img>
+                                            <div class="promo-txt promo-txt2">Мы увидим: южные созвездия, Магеллановы Облака, Млечный Путь и&nbsp;многое другое.</div>
+                                            <div class="promo-row"><span class="pill">3-12 декабря 2026</span></div>
+                                            <div class="promo-row"><a href="https://tostars.ru/namibiya" target="_blank" class="btn-gold">Узнать больше</a></div>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-shell k4" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'supernova'}})" [class]="cards.open=='supernova' ? 'card-shell k4 is-open' : 'card-shell k4'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='supernova'?null:'supernova')}})"><span class="card-badge">#4</span><span class="card-title">Люди видели взрывы звезд</span> <span class="card-chev" [class]="cards.open=='supernova' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='supernova' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">В&nbsp;1054 году в&nbsp;небе неожиданно вспыхнула звезда. Почти месяц её было видно даже днём, а&nbsp;ночью&nbsp;— ещё два года. Это был взрыв сверхновой в&nbsp;созвездии Тельца. Её описывали в&nbsp;Китае, Японии, в&nbsp;арабских свитках и&nbsp;петроглифах Северной Америки.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="bortle bortle-r" style="top:660px;">Бортль 7. Пригородно-городское небо</div>
+                                <div class="card-shell k5" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'vampire'}})" [class]="cards.open=='vampire' ? 'card-shell k5 is-open' : 'card-shell k5'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='vampire'?null:'vampire')}})"><span class="card-badge">#5</span><span class="card-title">Звёзды-вампиры</span> <span class="card-chev" [class]="cards.open=='vampire' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='vampire' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">Некоторые звёзды буквально «питаются» соседними, перетягивая на&nbsp;себя их вещество. Звезда-«вампир» становится ярче и&nbsp;горячее, будто омолаживается, а&nbsp;её жертва теряет внешние слои и&nbsp;постепенно превращается в&nbsp;тусклый белый карлик.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-shell k6" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'neutron'}})" [class]="cards.open=='neutron' ? 'card-shell k6 is-open' : 'card-shell k6'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='neutron'?null:'neutron')}})"><span class="card-badge">#6</span><span class="card-title">Нейтронные звезды</span> <span class="card-chev" [class]="cards.open=='neutron' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='neutron' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">После взрыва сверхновой звезды на&nbsp;её месте остаётся шар размером 10–20&nbsp;км. Это&nbsp;— нейтронная звезда. Её плотность настолько высока, что&nbsp;чайная ложка этого вещества весит несколько миллиардов тонн&nbsp;— больше, чем весь мировой торговый флот.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-shell k7" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'tvnoise'}})" [class]="cards.open=='tvnoise' ? 'card-shell k7 is-open' : 'card-shell k7'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='tvnoise'?null:'tvnoise')}})"><span class="card-badge">#7</span><span class="card-title">Помехи на&nbsp;старых ТВ</span> <span class="card-chev" [class]="cards.open=='tvnoise' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='tvnoise' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">Часть шума на&nbsp;экране аналогового телевизора&nbsp;— это не&nbsp;помехи, а&nbsp;реликтовое излучение Вселенной. Примерно каждое сотое зёрнышко&nbsp;— слабое эхо Большого взрыва, летевшее до&nbsp;антенны ТВ больше 13 миллиардов лет.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-shell k8 glow-amber" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'eclipse'}})" [class]="cards.open=='eclipse' ? 'card-shell k8 glow-amber is-open' : 'card-shell k8 glow-amber'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='eclipse'?null:'eclipse')}})"><span class="card-badge">#8</span><span class="card-title">5 минут ночи</span> <span class="card-chev" [class]="cards.open=='eclipse' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='eclipse' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">На&nbsp;несколько минут Луна полностью закрывает Солнце. Вокруг него появляется уникальное свечение&nbsp;— солнечная корона. Температура снижается на&nbsp;несколько градусов. Резко темнеет, днём появляются звёзды и&nbsp;планеты. Горизонт со&nbsp;всех сторон окружает закат, а&nbsp;животные ищут укрытие, будто наступила ночь.</div>
+                                    </div>
+                                    <div class="promo">
+                                      <table cellspacing="0" cellpadding="0" class="promo-t">
+                                        <tr>
+                                          <td valign="top" class="promo-l">
+                                            <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/offer-morocco-headline.png" width="264" height="24" layout="fixed" alt="Ловим шанс в Марокко" class="promo-head"></amp-img>
+                                            <div class="promo-txt">Увидим полное затмение с&nbsp;крыши отеля в&nbsp;Танжере, на&nbsp;берегу Атлантики. Отправимся в&nbsp;путешествие по&nbsp;имперским городам Марокко: средневековый Фес, голубые улочки Шефшауэна и&nbsp;мечеть Хасана II, парящая над&nbsp;океаном.</div>
+                                            <table cellspacing="0" cellpadding="0">
+                                              <tr>
+                                                <td class="pic-a">
+                                                  <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/offer-morocco-1.png" width="139" height="173" layout="responsive" alt="Марокко" class="pic"></amp-img>
+                                                </td>
+                                                <td class="pic-b">
+                                                  <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/offer-morocco-2.png" width="139" height="173" layout="responsive" alt="Солнечное затмение" class="pic"></amp-img>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                          <td valign="top" class="promo-r">
+                                            <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/offer-morocco-main.png" width="197" height="167" layout="responsive" alt="Марокко" class="pic"></amp-img>
+                                            <div class="promo-txt promo-txt2">Следующий шанс увидеть это здесь&nbsp;— примерно через 375 лет!</div>
+                                            <div class="promo-row"><span class="pill">28 июля&nbsp;— 3 августа <b>2027</b></span></div>
+                                            <div class="promo-row"><a href="https://tostars.ru/marokko" target="_blank" class="btn-gold">Узнать больше</a></div>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="bortle bortle-l" style="top:1320px;">Бортль 5. Пригородное небо</div>
+                                <div class="card-shell k9" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'kessler'}})" [class]="cards.open=='kessler' ? 'card-shell k9 is-open' : 'card-shell k9'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='kessler'?null:'kessler')}})"><span class="card-badge">#9</span><span class="card-title">Эффект Кесслера</span> <span class="card-chev" [class]="cards.open=='kessler' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='kessler' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">На&nbsp;орбите Земли больше 130 миллионов обломков, а&nbsp;число спутников стремительно растёт с&nbsp;каждым годом. Эффект Кесслера&nbsp;— сценарий, при&nbsp;котором столкновение нескольких из&nbsp;них запускает цепную реакцию. В&nbsp;этом случае отключатся GPS, связь и&nbsp;телевидение, а&nbsp;космические запуски станут невозможными.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-shell k10" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'void'}})" [class]="cards.open=='void' ? 'card-shell k10 is-open' : 'card-shell k10'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='void'?null:'void')}})"><span class="card-badge">#10</span><span class="card-title">Великая пустота</span> <span class="card-chev" [class]="cards.open=='void' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='void' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">В&nbsp;созвездии Волопаса есть почти пустая область диаметром 330 миллионов световых лет. Там, где по&nbsp;расчётам должны быть тысячи галактик, обнаружили всего около 60. Куда делись остальные&nbsp;— учёные не&nbsp;знают.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-shell k11" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'tabby'}})" [class]="cards.open=='tabby' ? 'card-shell k11 is-open' : 'card-shell k11'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='tabby'?null:'tabby')}})"><span class="card-badge">#11</span><span class="card-title">Звезда Табби</span> <span class="card-chev" [class]="cards.open=='tabby' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='tabby' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">Яркость звезды Табби иногда падает, но&nbsp;не&nbsp;на&nbsp;доли процента, как&nbsp;бывает при&nbsp;прохождении планеты, а&nbsp;на&nbsp;впечатляющие 22%, причём безо всякой закономерности. Это нетипично вообще ни для&nbsp;чего известного науке. Среди версий обсуждалась «Сфера Дайсона»&nbsp;— гигантская искусственная конструкция вокруг звезды для&nbsp;сбора её энергии. Основная гипотеза сейчас&nbsp;— облака пыли и&nbsp;обломков, но&nbsp;точного ответа нет.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="bortle bortle-r" style="top:1880px;">Бортль 3. Деревенское небо</div>
+                                <div class="card-shell k12" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'oumuamua'}})" [class]="cards.open=='oumuamua' ? 'card-shell k12 is-open' : 'card-shell k12'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='oumuamua'?null:'oumuamua')}})"><span class="card-badge">#12</span><span class="card-title">Оумуамуа</span> <span class="card-chev" [class]="cards.open=='oumuamua' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='oumuamua' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">В&nbsp;2017 году в&nbsp;Солнечную систему впервые залетел гость из&nbsp;межзвёздного пространства. Его назвали Оумуамуа, что&nbsp;с&nbsp;гавайского переводится как&nbsp;«разведчик». Он двигался по&nbsp;аномальной траектории и&nbsp;имел форму «сигары», нетипичную для&nbsp;астероидов и&nbsp;комет. Происхождение объекта не&nbsp;доказано: среди версий учёные всерьёз обсуждали и&nbsp;искусственное.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-shell k13 glow-azure" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'neutrino'}})" [class]="cards.open=='neutrino' ? 'card-shell k13 glow-azure is-open' : 'card-shell k13 glow-azure'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='neutrino'?null:'neutrino')}})"><span class="card-badge">#13</span><span class="card-title">Закрытые подземные обсерватории</span> <span class="card-chev" [class]="cards.open=='neutrino' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='neutrino' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">Нейтрино почти невозможно отследить&nbsp;— они едва взаимодействуют с&nbsp;веществом. Каждую секунду сквозь ваше тело проходит около 100 триллионов нейтрино. Поймать их можно только там, куда не&nbsp;доберётся постороннее излучение.</div>
+                                      <div class="fact">Так, подо льдом Байкала стоит телескоп Baikal-GVD&nbsp;— он смотрит не&nbsp;в&nbsp;небо, а&nbsp;в&nbsp;глубь озера, в&nbsp;кромешную тьму. Там он ловит редкие вспышки света&nbsp;— след нейтрино, столкнувшегося с&nbsp;молекулой воды. А&nbsp;на&nbsp;Кавказе, в&nbsp;толще горы Андырчи, работает первая в&nbsp;мире подземная обсерватория. Её туннели уходят в&nbsp;скалу на&nbsp;3670 метров, а&nbsp;внутрь горы сотрудников возит специальный поезд.</div>
+                                    </div>
+                                    <div class="promo">
+                                      <table cellspacing="0" cellpadding="0" class="promo-t">
+                                        <tr>
+                                          <td valign="top" class="promo-l">
+                                            <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/offer-elbrus-headline.png" width="200" height="49" layout="fixed" alt="Обычным туристам туда нельзя, но..." class="promo-head"></amp-img>
+                                            <div class="promo-txt">... для&nbsp;нас проведут экскурсию прямо по&nbsp;обсерватории! Пять ночей на&nbsp;берегу горной реки Баксан, обсерватория Пик Терскол с&nbsp;двухметровым телескопом «Цейс-2000» и&nbsp;ночные наблюдения неба у&nbsp;подножья Эльбруса.</div>
+                                            <table cellspacing="0" cellpadding="0">
+                                              <tr>
+                                                <td class="pic-a">
+                                                  <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/offer-elbrus-1.png" width="139" height="152" layout="responsive" alt="Приэльбрусье" class="pic"></amp-img>
+                                                </td>
+                                                <td class="pic-b">
+                                                  <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/offer-elbrus-2.png" width="139" height="152" layout="responsive" alt="Ночное небо у Эльбруса" class="pic"></amp-img>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                          <td valign="top" class="promo-r">
+                                            <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/offer-elbrus-main.png" width="197" height="167" layout="responsive" alt="Обсерватория Пик Терскол" class="pic"></amp-img>
+                                            <div class="promo-txt promo-txt2">Мы увидим: Марс, Сатурн, Юпитер и&nbsp;от&nbsp;20 до&nbsp;30 созвездий летнего неба.</div>
+                                            <div class="promo-row"><span class="pill">15-20 июня 2026</span></div>
+                                            <div class="promo-row"><a href="https://tostars.ru/june26" target="_blank" class="btn-gold">Узнать больше</a></div>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="bortle bortle-l" style="top:2350px;">Бортль 1. Идеально-тёмное небо</div>
+                                <div class="card-shell k14" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'attractor'}})" [class]="cards.open=='attractor' ? 'card-shell k14 is-open' : 'card-shell k14'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='attractor'?null:'attractor')}})"><span class="card-badge">#14</span><span class="card-title">Великий аттрактор</span> <span class="card-chev" [class]="cards.open=='attractor' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='attractor' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">Млечный Путь мчится сквозь Вселенную со&nbsp;скоростью более 2 миллионов км/ч к&nbsp;точке, которую называют Великим Аттрактором. Это гравитационная аномалия массой в&nbsp;сто тысяч галактик, но&nbsp;увидеть его напрямую нельзя: он скрыт за&nbsp;плотным диском Млечного Пути, в&nbsp;«зоне избегания». Долететь до&nbsp;него мы никогда не&nbsp;сможем&nbsp;— Вселенная расширяется быстрее, чем мы приближаемся. Похоже, мы обречены бесконечно падать в&nbsp;его сторону, так и&nbsp;не&nbsp;узнав, что&nbsp;нас туда тянет.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-shell k15" role="presentation" tabindex="-1" on="tap:AMP.setState({cards:{open:'wow'}})" [class]="cards.open=='wow' ? 'card-shell k15 is-open' : 'card-shell k15'">
+                                  <div class="card-head" role="button" tabindex="0" on="tap:AMP.setState({cards:{open:(cards.open=='wow'?null:'wow')}})"><span class="card-badge">#15</span><span class="card-title">Сигнал Wow!</span> <span class="card-chev" [class]="cards.open=='wow' ? 'card-chev is-open' : 'card-chev'"><span class="card-chev-arrow"></span></span></div>
+                                  <div class="card-reveal" [class]="cards.open=='wow' ? 'card-reveal is-open' : 'card-reveal'">
+                                    <div class="card-divider"></div>
+                                    <div class="card-body">
+                                      <div class="fact">В&nbsp;1977 году радиотелескоп Big Ear в&nbsp;Огайо поймал сигнал из&nbsp;космоса. Его частота совпадала с&nbsp;той, которую теоретически должна использовать для&nbsp;связи внеземная цивилизация, а&nbsp;мощность в&nbsp;30 раз превышала фоновый шум космоса. Астроном Джерри Эйман увидел его на&nbsp;распечатке и&nbsp;в&nbsp;изумлении обвёл красным, написав на&nbsp;полях «Wow!». Сигнал никогда не&nbsp;повторился, а&nbsp;его источник не&nbsp;нашли. За&nbsp;полвека ни одно естественное объяснение так и&nbsp;не&nbsp;подошло. Кажется, мы всё-таки услышали кого-то ещё...</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" class="pitch-td">
+                              <table align="center" cellspacing="0" cellpadding="0" class="pitch">
+                                <tr>
+                                  <td class="pitch-in">
+                                    <div class="pitch-p" style="padding-top:0;">Многие из&nbsp;нас тянутся к&nbsp;открытиям, к&nbsp;неизвестному, к&nbsp;тайнам, которые хранит мир вокруг.</div>
+                                    <div class="pitch-p">Для&nbsp;всех, кто разделяет это чувство, мы создали <b class="gold">ToStars</b>.</div>
+                                    <table align="center" cellspacing="0" cellpadding="0" class="pitch-pics">
+                                      <tr>
+                                        <td class="pp">
+                                          <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/about-photo-1.png" width="210" height="120" layout="responsive" alt="Наша группа" class="pic"></amp-img>
+                                        </td>
+                                        <td class="pp">
+                                          <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/about-photo-2.png" width="210" height="120" layout="responsive" alt="Наша группа" class="pic"></amp-img>
+                                        </td>
+                                        <td class="pp pp-last">
+                                          <amp-img src="https://storage.dashamail.ru/files/169038/iceberg_26/about-photo-3.png" width="210" height="120" layout="responsive" alt="Наша группа" class="pic"></amp-img>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <div class="pitch-p pitch-narrow">Мы путешествуем в&nbsp;самые редкие и&nbsp;интересные локации: смотрим северное сияние за&nbsp;полярным кругом, ночуем в&nbsp;пустыне под&nbsp;звёздным небом, исследуем закрытые обсерватории.</div>
+                                    <div class="pitch-p pitch-narrow">В&nbsp;наших поездках интересно будет каждому. Мы учим новичков находить созвездия и&nbsp;ориентироваться в&nbsp;небе&nbsp;— и&nbsp;увлекаем космосом на&nbsp;всю жизнь. Опытные присоединяются к&nbsp;нам, чтобы взглянуть на&nbsp;знакомое им небо с&nbsp;нового ракурса.</div>
+                                    <div class="pitch-p pitch-narrow">Выбирайте путешествие на&nbsp;свой вкус, следите за&nbsp;новостями в&nbsp;наших каналах. И&nbsp;помните&nbsp;— самые интересные открытия всегда начинаются с&nbsp;простого любопытства.</div>
+                                    <div class="pitch-btns"><a href="https://tostars.ru/" target="_blank" class="btn-gold btn-wide">Выбрать путешествие</a> <a href="https://t.me/turilov_tostars" target="_blank" class="btn-ghost btn-wide">Следить за&nbsp;новостями</a></div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" style="padding:70px 0 40px 0;" class="mob-pb0">
+                              <table align="center" width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;max-width:600px;">
+                                <tr>
+                                  <td bgcolor="#0F0F10" style="padding:30px 10px 30px 10px;border-radius:20px 20px;background:linear-gradient(#0F0F10,#0F0F10);">
+                                    <table align="center" width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;max-width:590px;">
+                                      <tr>
+                                        <td bgcolor="#0F0F10" align="center" style="text-align: center;padding: 0 0 0 0;border-radius:20px 20px 0 0;background:linear-gradient(#0F0F10,#0F0F10);">
+                                          <table width="100%" align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;max-width:640px;">
+                                            <tr>
+                                              <td align="center" style="text-align: center;padding: 0 0 0 0;">
+                                                <a href="https://tostars.ru/" target="_blank" style="outline: none;text-decoration: none;">
+                                                  <amp-img src="https://storage.dashamail.ru/files/169038/Group_4_23263.png" width="64" height="36" alt="TOSTARS" style="border: 0;height: auto;max-width: 64px;outline: none;text-decoration: none;width: 100%;margin: 0 auto;" layout="responsive"></amp-img>
+                                                </a>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td align="center" style="text-align: center;padding: 30px 0 0 0;">
+                                                <amp-img src="https://storage.dashamail.ru/files/169038/Do_vstrechi_v_puteshestvii_24679.png" width="232" height="20" alt="До встречи в путешествии!" style="border: 0;height: auto;max-width:234px;outline: none;text-decoration: none;width: 100%;margin: 0 auto;" layout="responsive"></amp-img>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center" style="padding:30px 0 0 0;">
+                                          <table align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+                                            <tr>
+                                              <td align="center" style="padding:0 5px;">
+                                                <a href="https://t.me/traveltostar" target="_blank" style="font-family:Inter, Arial;color:#000000;font-size:22px;line-height:22px;text-decoration:none;font-weight:bold;">
+                                                  <amp-img src="https://storage.dashamail.ru/files/169038/tg6796.png" width="38" height="38" alt="Наш Telegram" style="width:100%;max-width:38px;min-width:30px;text-decoration: none;display: block;"></amp-img>
+                                                </a>
+                                              </td>
+                                              <td align="center" style="padding:0 25px;">
+                                                <a href="https://wa.me/79035378946" target="_blank" style="font-family:Inter, Arial;color:#000000;font-size:22px;line-height:22px;text-decoration:none;font-weight:bold;">
+                                                  <amp-img src="https://storage.dashamail.ru/files/169038/whatsap7074.png" width="38" height="38" alt="Наш Whatsapp" style="width:100%;max-width:38px;min-width:30px;text-decoration: none;display: block;"></amp-img>
+                                                </a>
+                                              </td>
+                                              <td align="center" style="padding:0 5px;">
+                                                <a href="tel:84957901390" target="_blank" style="font-family:Inter, Arial;color:#000000;font-size:22px;line-height:22px;text-decoration:none;font-weight:bold;">
+                                                  <amp-img src="https://storage.dashamail.ru/files/169038/tg_12672.png" width="38" height="38" alt="Наш телефон" style="width:100%;max-width:38px;min-width:30px;text-decoration: none;display: block;"></amp-img>
+                                                </a>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center" style="padding:30px 0 0 0;">
+                                          <span style="color:#B5B2B2;font-family:Arial;font-size: 12px;line-height:14px;text-decoration: none;text-align: center;">
+                                            <div class="gmail-blend-screen">
+                                              <div class="gmail-blend-difference">Вы&nbsp;получили это письмо, потому что&nbsp;подписались на&nbsp;рассылку <a href="https://tostars.ru/" target="_blank" style="color:#FFFFFF;text-decoration: none;font-weight: bold;">ToStars</a></div>
+                                            </div>
+                                          </span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
