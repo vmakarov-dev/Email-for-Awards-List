@@ -1,0 +1,860 @@
+<!doctype html>
+<html ⚡4email data-css-strict>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style amp4email-boilerplate>body{visibility:hidden}</style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <style amp-custom>
+      .body {
+      margin: 0;
+      background-color: #e9eced;
+      }
+      .start-screen {
+      cursor: pointer;
+      box-shadow: 0px 0px 22px 2px #858585;
+      }
+      .bg {
+      width: 100%;max-width:552px;height:502px;
+      }
+      .game-height {
+      height:502px;
+      }
+      .dn {
+      display: none;
+      }
+      .db {
+      display: block;
+      }
+      .op0 {
+      position: absolute;
+      opacity: 0;
+      }
+      .op1 {
+      opacity: 1;
+      position: relative;
+      }
+      .result-button {
+      position: relative;
+      bottom:-510px;
+      left:0;
+      }
+      .result-button-2 {
+      position: absolute;
+      bottom:-75px;
+      left:50%;
+      transform: translateX(-50%);
+      }
+      .peace-ending {
+      position: absolute;	
+      top: 0;
+      left: 0;
+      z-index:3;
+      width: 100%;
+      width: 552px;
+      height:502px;
+      opacity: 0;
+      }
+      .peace-ending.activated {
+      opacity: 1;
+      transition: opacity 0.1s ease-out;
+      transition-delay: 17s;
+      }
+      .peace-screen {
+      position: absolute;	
+      top: 0;
+      left: 0;
+      width: 100%;
+      width: 552px;
+      height:502px;
+      opacity: 0;
+      }
+      .peace-screen.activated {
+      opacity: 1;
+      transition: opacity 0.1s ease-out;
+      transition-delay: 20.2s;
+      }
+      /* turkeys */
+      .turkey {
+      position: absolute;
+      cursor: pointer;
+      }
+      .turkey-0 {
+      cursor: pointer;
+      position: relative;	
+      top: 190px;
+      left: -370px;
+      z-index:3;
+      width: 120px;
+      height:120px;
+      }
+      .turkey-0.activated {
+      transition: transform 1.1s ease-out;
+      transform: translate(760px, 0);
+      transition-delay: 0.5s;
+      }
+      .turkey-1 {
+      cursor: pointer;
+      position: relative;
+      top: 80px;
+      left: 370px;
+      z-index:3;
+      width: 150px;
+      height:150px;
+      }
+      .turkey-1.activated {
+      transition: transform 1.3s ease-out;
+      transform: translate(-760px, 10px);
+      transition-delay: 1.9s;
+      }
+      .turkey-2 {
+      cursor: pointer;
+      position: relative;
+      top: -20px;
+      left: -370px;
+      z-index:3;
+      width: 140px;
+      height:140px;
+      }
+      .turkey-2.activated {
+      transition: transform 1.5s ease-out;
+      transform: translate(760px, -70px);
+      transition-delay: 2.9s;
+      }
+      .turkey-3 {
+      cursor: pointer;
+      position: relative;
+      top: -100px;
+      left: 370px;
+      z-index:3;
+      width: 80px;
+      height:80px;
+      }
+      .turkey-3.activated {
+      transition: transform 1.4s ease-out;
+      transform: translate(-760px, -90px);
+      transition-delay: 5.1s;
+      }
+      .turkey-4 {
+      cursor: pointer;
+      position: relative;
+      top: -260px;
+      left: -370px;
+      z-index:3;
+      width: 140px;
+      height:140px;
+      }
+      .turkey-4.activated {
+      transition: transform 3.2s;
+      transform: translate(760px, -50px);
+      transition-delay: 6.4s;
+      }
+      .turkey-5 {
+      cursor: pointer;
+      position: relative;
+      top: -370px;
+      left: 370px;
+      z-index:3;
+      width: 110px;
+      height:110px;
+      }
+      .turkey-5.activated {
+      transition: transform 1.4s ease-out;
+      transform: translate(-760px, -30px);
+      transition-delay: 9.5s;
+      }
+      .turkey-6 {
+      cursor: pointer;
+      position: relative;
+      top: -570px;
+      left: -370px;
+      z-index:3;
+      width: 180px;
+      height:180px;
+      }
+      .turkey-6.activated {
+      transition: transform 3s ease-out;
+      transform: translate(760px, 10px);
+      transition-delay: 10.5s;
+      }
+      .turkey-7 {
+      cursor: pointer;
+      position: relative;
+      top: -700px;
+      left: 370px;
+      z-index:3;
+      width: 140px;
+      height:140px;
+      }
+      .turkey-7.activated {
+      transition: transform 1.4s ease-out;
+      transform: translate(-760px, -30px);
+      transition-delay: 14s;
+      }
+      .turkey-8 {
+      cursor: pointer;
+      position: relative;
+      top: -850px;
+      left: -370px;
+      z-index:3;
+      width: 100px;
+      height:100px;
+      }
+      .turkey-8.activated {
+      transition: transform 1s ease-out;
+      transform: translate(760px, 10px);
+      transition-delay: 15.6s;
+      }
+      .turkey-9 {
+      cursor: pointer;
+      position: relative;
+      top: 180px;
+      left: -90px;
+      z-index:3;
+      width: 270px;
+      height:270px;
+      }
+      .turkey-9.activated {
+      transition: transform 3s ease-out;
+      transform: translate(250px, -5px) scale(0.1);
+      transition-delay: 17.9s;
+      }
+      @media only screen and (max-width:550px) {
+      .mob-adapt {
+      width: 100%;
+      margin: 0 auto;
+      }
+      .bg-adapt {
+      height:340px;
+      }
+      }
+      @media only screen and (max-width:450px) {
+      .mob-dn {
+      display: none;
+      }
+      .mob-db {
+      display: block;
+      }
+      .mob-adapt {
+      width: 100%;
+      margin: 0 auto;
+      }
+      .bg-adapt {
+      height:340px;
+      }
+      .turkey-1 {
+      cursor: pointer;
+      position: relative;
+      top: 110px;
+      left: 370px;
+      z-index:3;
+      width: 100px;
+      height:100px;
+      }
+      .turkey-1.activated {
+      transition: transform 1.7s ease-out;
+      transform: translate(-760px, 10px);
+      transition-delay: 1s;
+      }
+      .turkey-2 {
+      cursor: pointer;
+      position: relative;
+      top: 30px;
+      left: 370px;
+      z-index:3;
+      width: 80px;
+      height:80px;
+      }
+      .turkey-2.activated {
+      transition: transform 1.4s ease-out;
+      transform: translate(-760px, 70px);
+      transition-delay: 2.9s;
+      }
+      .turkey-3 {
+      cursor: pointer;
+      position: relative;
+      top: -70px;
+      left: 370px;
+      z-index:3;
+      width: 110px;
+      height:110px;
+      }
+      .turkey-3.activated {
+      transition: transform 2.4s ease-out;
+      transform: translate(-760px, 0);
+      transition-delay: 4.5s;
+      }
+      .turkey-4 {
+      cursor: pointer;
+      position: relative;
+      top: -100px;
+      left: 370px;
+      z-index:3;
+      width: 60px;
+      height:60px;
+      }
+      .turkey-4.activated {
+      transition: transform 1.4s ease-out;
+      transform: translate(-760px, -50px);
+      transition-delay: 7.1s;
+      }
+      .turkey-5 {
+      cursor: pointer;
+      position: relative;
+      top: -210px;
+      left: 370px;
+      z-index:3;
+      width: 90px;
+      height:90px;
+      }
+      .turkey-5.activated {
+      transition: transform 3.6s ease-out;
+      transform: translate(-760px, 0);
+      transition-delay: 9s;
+      }
+      .turkey-7 {
+      cursor: pointer;
+      position: relative;
+      top: -320px;
+      left: 370px;
+      z-index:3;
+      width: 100px;
+      height:100px;
+      }
+      .turkey-7.activated {
+      transition: transform 2s ease-out;
+      transform: translate(-760px, 0);
+      transition-delay: 11.9s;
+      }
+      .turkey-9 {
+      cursor: pointer;
+      position: relative;
+      top: 120px;
+      left: -80px;
+      z-index:3;
+      width: 120px;
+      height:120px;
+      }
+      .turkey-9.activated {
+      transition: transform 3s ease-out;
+      transform: translate(120px, 25px) scale(0.1);
+      transition-delay: 14.7s;
+      }
+      .peace-ending {
+      position: absolute;	
+      top: 0;
+      left: 0;
+      z-index:3;
+      width: 100%;
+      height:340px;
+      opacity: 0;
+      }
+      .peace-ending.activated {
+      opacity: 1;
+      transition: opacity 0.1s ease-out;
+      transition-delay: 14.1s;
+      }
+      .peace-screen {
+      position: absolute;	
+      top: 0;
+      left: 0;
+      z-index:3;
+      width: 100%;
+      height:340px;
+      opacity: 0;
+      }
+      .peace-screen.activated {
+      opacity: 1;
+      transition: opacity 0.1s ease-out;
+      transition-delay: 17.6s;
+      }
+      .result-button {
+      bottom: -335px;
+      }
+      .game-height {
+      height:362px;
+      }
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div class="preheader" style="font-size:0px;color:transparent;opacity:0;">И до 20 бесплатных уроков по промокоду BLACK24</div>
+    <div style="font-size:0px;color:transparent;opacity:0;">&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</div>
+    <div align="center" style="line-height: normal; word-break: normal;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="line-height: normal; border-collapse: collapse;">
+        <tr>
+          <td align="center" bgcolor="#e9eced" style="background-color:#e9eced; background-repeat: repeat;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 572px; min-width: 10px;">
+              <tr>
+                <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 16px;padding-bottom: 16px;">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 590px;">
+                    <tr>
+                      <td align="center" bgcolor="#ffffff" style="background-color: #ffffff;border-radius: 0;background-image:url(&quot;https://email-images.mindbox.ru/11ef06bb-9efb-4a20-91e3-b75d9842e060/6.png&quot;); background-repeat: repeat;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="center" style="padding: 16px;">
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td align="left" valign="middle" style="padding-right: 10px;">
+                                    <a href="https://skyeng.ru/?source_type=email&utm_source=email&utm_medium=email&utm_campaign=weekly_481%7Cadult_no_student%7Cweekly&utm_term=header%7C03122024&workflow=Straight-old&product=type-mainpage%7Cname-skyeng&manager=pbarashkova"
+                                      target="_blank">
+                                      <amp-img width="110" height="28" layout="responsive" src="https://email-images.mindbox.ru/skyeng/701c38af-f9ba-4f6d-bb56-24837a0e4901/f563577e-d4ef-4650-a81d-ee6ab5ed5ce8.png" alt="" style="display: block; width: 110px;"></amp-img>
+                                    </a>
+                                  </td>
+                                  <td align="right" valign="middle">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <td align="left" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px; color: #858585;padding-left: 5px;">
+                                          Hooray, it&rsquo;s Thanksgiving!
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding:12px 0 0 0;">
+                </td>
+              <tr>
+              <tr>
+                <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td align="center" bgcolor="#ffffff" style="background-color: #FFFFFF; border-radius: 0px;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="center" style="padding:0;">
+                              <amp-img width="552" height="144" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/af61cb3a-ff05-4f86-bd9b-06f08999b355.png" alt="" style="display: block; width: 100%; max-width: 552px; height: auto; color: rgb(0, 0, 0); text-decoration: none; border-radius: 0px;">
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                    <tr>
+                      <td align="center" bgcolor="#ffffff" style="padding: 6px 16px; background-color: #FFFFFF; border-top-left-radius: 0; border-top-right-radius: 0;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                          <tr>
+                            <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:12px 0 0 0;">
+                              Hey! На прошлой неделе американцы отпраздновали <span style="font-weight: bold;">Thanksgiving&nbsp;Day</span> (День благодарения), а сегодня к вам заглянул главный символ праздника!
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                    <tr>
+                      <td align="center" bgcolor="#ffffff" style="padding: 6px 16px; background-color: #ffffff;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                          <tr>
+                            <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:4px 0 0 0;">
+                              В её индюшачью честь у Белого дома прошла ежегодная <span style="font-weight: bold;">turkey-pardoning ceremony</span> (церемония помилования индейки) и президент освободил двух птиц от <span style="text-decoration: line-through;">чести</span> участи быть съеденными.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                    <tr>
+                      <td align="center" bgcolor="#ffffff" style="padding: 6px 16px; background-color: #ffffff;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                          <tr>
+                            <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:12px 0 0 0;">
+                              В сериале <span style="font-weight: bold;">«Friends»</span> («Друзья») индюшкам везёт меньше, и рецептам <span style="font-weight: bold;">Thanksgiving turkey</span> посвящён целый эпизод. Вы даже можете приготовить это праздничное <span style="font-weight: bold;">dish</span> (блюдо) по любому из них.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                    <tr>
+                      <td align="center" bgcolor="#ffffff" style="padding: 6px 16px; background-color: #FFFFFF; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                          <tr>
+                            <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:4px 0 8px 0;">
+                              В&nbsp;этой игре у&nbsp;вас есть выбор:
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding:4px 0 0 0;">
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                                <tr>
+                                  <td width="24" style="vertical-align:top;">
+                                    <amp-img width="24" height="24" layout="responsive" src="https://email-images.mindbox.ru/skyeng/701c38af-f9ba-4f6d-bb56-24837a0e4901/c5e9d79e-6ded-4c35-82c9-9b26a5e404b7.png" alt="-" style="display: block;width:24px;border-radius:0;"></amp-img>
+                                  </td>
+                                  <td style="vertical-align:top;padding:0 0 0 8px;">
+                                    <span style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:4px 0 0 0;">
+                                    Кликнуть по&nbsp;индюшке, чтобы &laquo;поймать&raquo; её&nbsp;и&nbsp;приготовить. За&nbsp;поимку птицы вы&nbsp;получите подарок!
+                                    </span>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding:4px 0 0 0;">
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                                <tr>
+                                  <td width="24" style="vertical-align:top;">
+                                    <amp-img width="24" height="24" layout="responsive" src="https://email-images.mindbox.ru/skyeng/701c38af-f9ba-4f6d-bb56-24837a0e4901/c5e9d79e-6ded-4c35-82c9-9b26a5e404b7.png" alt="-" style="display: block;width:24px;border-radius:0;"></amp-img>
+                                  </td>
+                                  <td style="vertical-align:top;padding:0 0 0 8px;">
+                                    <span style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:4px 0 0 0;">
+                                    Дать птице убежать и&nbsp;получить подарок за&nbsp;её&nbsp;&laquo;помилование&raquo;. 
+                                    </span>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:12px 0 14px 0;">
+                              <i>Выбирайте, как закончить игру!</i> А&nbsp;награда будет ждать вас при любом раскладе.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding:44px 0 0 0;">
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding-left: 0;padding-right: 0;padding-top: 0;padding-bottom: 0px;">
+                  <div id="start-screen" class="bg bg-adapt">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                      <tr>
+                        <td align="center" style="padding: 6px 0;">
+                          <div role="button"  role="button" on="tap:start-screen.toggleClass(class='op0'), game.toggleClass(class='op1'), peace-ending.toggleClass(class='activated'), peace-screen.toggleClass(class='activated'), turkey-0.toggleClass(class='activated'), turkey-1.toggleClass(class='activated'), turkey-2.toggleClass(class='activated'), turkey-3.toggleClass(class='activated'), turkey-4.toggleClass(class='activated'), turkey-5.toggleClass(class='activated'), turkey-6.toggleClass(class='activated'), turkey-7.toggleClass(class='activated'), turkey-8.toggleClass(class='activated'), turkey-9.toggleClass(class='activated'), turkey-1-m.toggleClass(class='activated'), turkey-3-m.toggleClass(class='activated'), turkey-5-m.toggleClass(class='activated'), turkey-7-m.toggleClass(class='activated'), turkey-9-m.toggleClass(class='activated'), peace-ending-m.toggleClass(class='activated'), turkey-2-m.toggleClass(class='activated'), turkey-4-m.toggleClass(class='activated')" tabindex="0" tabindex="0" class="start-screen">
+                            <amp-img width="552" height="502" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/1e5450d3-f399-4377-a1eb-7b7b358e53a7.png" alt="" style="display: block; width: 100%;max-width:552px;border-radius:0;"></amp-img>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <tr [hidden]="done == true">
+                <td align="center" style="padding-left: 0;padding-right: 0;padding-top: 0;padding-bottom: 0px;">
+                  <div id="game" class="game-height op0" style="max-width:552px;">
+                    <div class="db mob-dn" style="height:502px; background-image:url(&quot;https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/7f9ae3b1-90a8-491e-9a1c-b1d39d512b7e.png&quot;);background-size: contain;background-repeat: no-repeat; overflow: hidden;border-radius:0;z-index:5;vertical-align: middle;">
+                      <div id="turkey-0" class="turkey turkey-0" style="z-index:3;">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/47f340c3-4d7f-4b21-9d80-cb6831eb2cde.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-1" class="turkey turkey-1" style="z-index:3;">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/c3000c55-b3f1-44d7-a671-3efeb41516db.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-2" class="turkey turkey-2" style="z-index:3;">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/47f340c3-4d7f-4b21-9d80-cb6831eb2cde.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-3" class="turkey turkey-3" style="z-index:3;">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/c3000c55-b3f1-44d7-a671-3efeb41516db.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-4" class="turkey turkey-4" style="z-index:3;">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/47f340c3-4d7f-4b21-9d80-cb6831eb2cde.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-5" class="turkey turkey-5" style="z-index:3;">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/c3000c55-b3f1-44d7-a671-3efeb41516db.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-6" class="turkey turkey-6">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/47f340c3-4d7f-4b21-9d80-cb6831eb2cde.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-7" class="turkey turkey-7">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/c3000c55-b3f1-44d7-a671-3efeb41516db.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-8" class="turkey turkey-8">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/47f340c3-4d7f-4b21-9d80-cb6831eb2cde.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="peace-ending" class="peace-ending" style="z-index:1;">
+                        <div class="bg bg-adapt" style="background-image:url(&quot;https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/17444c89-7e26-4baf-8db7-967bf438098d.png&quot;);background-size: contain;background-repeat: no-repeat; overflow: hidden;border-radius:0;">
+                          <div id="turkey-9" class="turkey turkey-9" style="cursor:default">
+                            <amp-img width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/47f340c3-4d7f-4b21-9d80-cb6831eb2cde.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dn mob-db bg bg-adapt mob-adapt" style="background-image:url(&quot;https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/7f9ae3b1-90a8-491e-9a1c-b1d39d512b7e.png&quot;);background-size: contain;background-repeat: no-repeat; overflow: hidden;border-radius:0;z-index:5;vertical-align: middle;">
+                      <div id="turkey-1-m" class="turkey turkey-1" style="z-index:3;">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/c3000c55-b3f1-44d7-a671-3efeb41516db.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-2-m" class="turkey turkey-2" style="z-index:3;">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/c3000c55-b3f1-44d7-a671-3efeb41516db.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-3-m" class="turkey turkey-3" style="z-index:3;">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/c3000c55-b3f1-44d7-a671-3efeb41516db.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-4-m" class="turkey turkey-4" style="z-index:3;">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/c3000c55-b3f1-44d7-a671-3efeb41516db.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-5-m" class="turkey turkey-5" style="z-index:3;">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/c3000c55-b3f1-44d7-a671-3efeb41516db.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="turkey-7-m" class="turkey turkey-7">
+                        <amp-img role="button" on="tap:AMP.setState({done: true})" tabindex="0" width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/c3000c55-b3f1-44d7-a671-3efeb41516db.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                      </div>
+                      <div id="peace-ending-m" class="peace-ending" style="z-index:1;">
+                        <div class="bg bg-adapt" style="background-image:url(&quot;https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/17444c89-7e26-4baf-8db7-967bf438098d.png&quot;);background-size: contain;background-repeat: no-repeat; overflow: hidden;border-radius:0;">
+                          <div id="turkey-9-m" class="turkey turkey-9" style="cursor:default">
+                            <amp-img width="157" height="166" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/47f340c3-4d7f-4b21-9d80-cb6831eb2cde.png" alt="" style="width: 100%;max-width:157px;"></amp-img>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="peace-screen" class="bg bg-adapt mob-adapt peace-screen" style="z-index:2;">
+                      <div class="bg bg-adapt" style="background-image:url(&quot;https://email-images.mindbox.ru/skyeng/29fbb1d7-7286-4701-8e5b-618e722697fb/3c70f65e-49d1-4f85-9c41-b86ca2840595.png&quot;);background-size: contain;background-repeat: no-repeat; border-radius:0;">
+                        <div class="result-button">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 590px;">
+                            <tr>
+                              <td align="center" style="padding: 18px 16px 6px 16px;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 254px; border-spacing: 0px;">
+                                  <tr>
+                                    <td align="center" valign="middle" bgcolor="#00AEFA" height="46" style="background-color: #00AEFA; border-radius: 10px;">
+                                      <a href="http://skyeng.ru/blackfriday24?source_type=email&utm_source=email&utm_medium=email&utm_campaign=weekly_481%7Cadult_no_student%7Cweekly&utm_term=button%7C03122024&workflow=Straight-new&product=type-skyeng_action%7Cname-blackfriday24&manager=pbarashkova&promocode=BLACK24" border="0" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height: 46px; white-space: nowrap; color:#ffffff; text-decoration: none; padding-left: 10px; padding-right: 10px; font-weight: bold; display: block;">
+                                      Применить промокод
+                                      </a>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr hidden [hidden]="done != true" id="end-screen"  class="mob-adapt">
+                <td align="center" style="padding-left: 0;padding-right: 0;padding-top: 0;padding-bottom: 0px;overflow: visible;position: relative;">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                    <tr>
+                      <td align="center" style="padding: 6px 0;">
+                        <div>
+                          <a href="http://skyeng.ru/blackfriday24?source_type=email&utm_source=email&utm_medium=email&utm_campaign=weekly_481%7Cadult_no_student%7Cweekly&utm_term=button%7C03122024&workflow=Straight-new&product=type-skyeng_action%7Cname-blackfriday24&manager=pbarashkova&promocode=BLACK24" border="0" target="_blank">
+                            <amp-img width="552" height="502" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/9888dee1-0196-4d80-815e-cb229b718eeb.png" alt="" style="display: block; width: 100%;max-width:552px;border-radius:0;"></amp-img>
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="result-button-2">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 590px;">
+                      <tr>
+                        <td align="center" style="padding: 18px 16px 6px 16px;">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 254px; border-spacing: 0px;">
+                            <tr>
+                              <td align="center" valign="middle" bgcolor="#00AEFA" height="46" style="background-color: #00AEFA; border-radius: 10px;">
+                                <a href="http://skyeng.ru/blackfriday24?source_type=email&utm_source=email&utm_medium=email&utm_campaign=weekly_481%7Cadult_no_student%7Cweekly&utm_term=button%7C03122024&workflow=Straight-new&product=type-skyeng_action%7Cname-blackfriday24&manager=pbarashkova&promocode=BLACK24" border="0" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height: 46px; white-space: nowrap; color:#ffffff; text-decoration: none; padding-left: 10px; padding-right: 10px; font-weight: bold; display: block;">
+                                Применить промокод
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 60px;padding-bottom: 0px;">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 590px;">
+                    <tr>
+                      <td align="center" style="padding: 40px 16px 24px;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="center" style="padding-bottom:16px;">
+                              <amp-img width="52" height="40" layout="responsive" src="https://email-images.mindbox.ru/skyeng/701c38af-f9ba-4f6d-bb56-24837a0e4901/0ae7bce8-2049-429d-b964-655852521933.png" alt="" style="display: block; max-width: 52px; width: 100%; height: auto;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding-bottom: 5px; font-weight: bold;">With lots of&nbsp;thanks</td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px; color: #858585;">Your Skyeng</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;position: relative;z-index: 10;">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" style="padding: 12px 16px 28px;">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr>
+                                <td align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px; color: #858585;padding-bottom: 4px;">
+                                  Понравилось письмо? Подарите нам звёздочку!
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center">
+                                  <table border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td align="left" valign="middle" style="padding-right:4px;">
+                                        <a border="0" target="_blank" href="https://skyeng-school.typeform.com/to/WwVRqbrz">
+                                          <amp-img layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/50ad24d8-8df8-441d-8fac-572fc2d5cd25.png" width="32" height="32" alt="" style="display: block; width: 32px; height: 32px;">
+                                        </a>
+                                      </td>
+                                      <td align="left" valign="middle" style="padding-right:4px;">
+                                        <a border="0" target="_blank" href="https://skyeng-school.typeform.com/to/JV7o2ihP">
+                                          <amp-img layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/78d36845-a045-455c-85ac-29546f2591f0.png" width="32" height="32" alt="" style="display: block; width: 32px; height: 32px;">
+                                        </a>
+                                      </td>
+                                      <td align="left" valign="middle" style="padding-right:4px;">
+                                        <a border="0" target="_blank" href="https://skyeng-school.typeform.com/to/CGdysQed">
+                                          <amp-img layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/08664264-44c5-4a0c-aa13-d46ce824f299.png" width="32" height="32" alt="" style="display: block; width: 32px; height: 32px;">
+                                        </a>
+                                      </td>
+                                      <td align="left" valign="middle" style="padding-right:4px;">
+                                        <a border="0" target="_blank" href="https://skyeng-school.typeform.com/to/QwTzrYki">
+                                          <amp-img layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/87de851a-bcbd-45e9-8206-5d3ec573dc91.png" width="32" height="32" alt="" style="display: block; width: 32px; height: 32px;">
+                                        </a>
+                                      </td>
+                                      <td align="left" valign="middle">
+                                        <a border="0" target="_blank" href="https://skyeng-school.typeform.com/to/LdQ4X4a2">
+                                          <amp-img layout="responsive" src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/6e6514e6-5715-458a-87f0-f9969f883033.png" width="32" height="32" alt="" style="display: block; width: 32px; height: 32px;">
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 56px;position: relative;z-index: 10;">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 590px;">
+                    <tr>
+                      <td align="center" bgcolor="#ffffff" style="padding: 16px; background-color: #ffffff;border-radius: 0;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="center" style="padding-bottom:20px;">
+                              <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td align="left" valign="middle">
+                                    <a href="https://skyeng.onelink.me/Egus/?af_sub1=email&af_sub2=vmanoylova&af_sub3=adults&af_sub5=-&af_sub4=type-mobile_app%7Cname-newsletter&pid=email&af_channel=email&c=brand-skyeng%7Caudience-adult%7Ctitle-chain&af_adset=format-button&af_ad=subcontent-webinar&clickid={logid}&is_retargeting=true&idfa={ios_ifa}" border="0" target="_blank">
+                                      <amp-img width="24" height="24" layout="responsive" src="https://email-images.mindbox.ru/skyeng/54d12554-7642-4b2e-964c-4b8ddcce3f8e/6028a83c-a3a7-43f5-a8d5-243cdd0c5997.png" alt="" style="display: block; width: 24px; height: 24px;"></amp-img>
+                                    </a>
+                                  </td>
+                                  <td align="left" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 24px; color: #00AEFA;padding-left: 1px; font-weight: bold; white-space: nowrap;">
+                                    <a href="https://skyeng.onelink.me/Egus/?af_sub1=email&af_sub2=vmanoylova&af_sub3=adults&af_sub5=-&af_sub4=type-mobile_app%7Cname-newsletter&pid=email&af_channel=email&c=brand-skyeng%7Caudience-adult%7Ctitle-chain&af_adset=format-button&af_ad=subcontent-webinar&clickid={logid}&is_retargeting=true&idfa={ios_ifa}" border="0" target="_blank" style="color: #00AEFA;text-decoration: none;"><span>Скачать приложение Skyeng</span></a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" style="padding-bottom:8px;">
+                              <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px; color: #858585;">
+                                    Задайте вопрос <a target="_blank" style="color:#858585;text-decoration: underline;" href="https://skyeng.ru/?source_type=email&utm_source=email&utm_medium=email&utm_campaign=weekly_481%7Cadult_no_student%7Cweekly&utm_term=footer%7C03122024&workflow=Straight-old&product=type-mainpage%7Cname-skyeng&manager=pbarashkova">на&nbsp;сайте</a> или&nbsp;свяжитесь с&nbsp;нами:
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" style="padding:8px 0 0 0;">
+                              <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td align="left" valign="middle" style="padding-right:12px;">
+                                    <a href="https://vk.com/skyeng" border="0" target="_blank">
+                                      <amp-img width="32" height="32" layout="responsive" src="https://email-images.mindbox.ru/skyeng/701c38af-f9ba-4f6d-bb56-24837a0e4901/afeddd3d-61f6-4511-a185-54df5e2d7fe5.png" alt="" style="display: block; width: 32px; height: 32px;"></amp-img>
+                                    </a>
+                                  </td>
+                                  <td align="left" valign="middle" style="padding-right:12px;">
+                                    <a href="https://www.youtube.com/user/skyengschool" border="0" target="_blank">
+                                      <amp-img width="32" height="32" layout="responsive" src="https://email-images.mindbox.ru/skyeng/54d12554-7642-4b2e-964c-4b8ddcce3f8e/cf948429-0dd2-454d-a44e-8decbdeb33a0.png" alt="" style="display: block; width: 32px; height: 32px;"></amp-img>
+                                    </a>
+                                  </td>
+                                  <td align="left" valign="middle">
+                                    <a href="https://tlgg.ru/skyengweekly" border="0" target="_blank">
+                                      <amp-img width="32" height="32" layout="responsive" src="https://email-images.mindbox.ru/skyeng/54d12554-7642-4b2e-964c-4b8ddcce3f8e/6e63cec2-52a8-41af-8138-689aeb722b22.png" alt="" style="display: block; width: 32px; height: 32px;"></amp-img>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;position: relative;z-index: 10;display:none;">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 590px;">
+                    <tr>
+                      <td align="center" style="padding: 12px 16px 32px;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px; color: #858585;padding-bottom: 12px;">
+                              <span style="font-weight: bold;">Вы&nbsp;получили это письмо, так как подписаны на&nbsp;рассылку от&nbsp;Skyeng.</span><br>Чтобы отписаться, перейдите <a border="0" target="_blank" style="color:#858585;text-decoration: underline;" href="https://study.skyeng.ru/unsubscribe?ticket=${ticket.EmailConfirmationLinkTicket}">по&nbsp;ссылке</a>.
+                              Данное предложение не&nbsp;является офертой.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px; color: #858585;">
+                              <a href="${Message.AccessibilityLink}" border="0" target="_blank" style="color:#858585;text-decoration: underline;"><span>Открыть в&nbsp;браузере</span></a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

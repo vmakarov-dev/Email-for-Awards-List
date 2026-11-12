@@ -1,0 +1,2534 @@
+<!doctype html>
+<html ⚡4email data-css-strict>
+  <head>
+    <meta charset="utf-8">
+    <style amp4email-boilerplate>body{visibility:hidden}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <style amp-custom>
+      .ac-header {
+      padding: 0;
+      border: none;
+      background-color:#262626;
+      }
+      .box-done {
+      background-color: #e1caa1;
+      font-family: Arial;
+      line-height:34px;
+      text-align: center;
+      text-transform: lowercase;
+      color: #000;
+      }
+      .box-done {
+      font-family: Arial;
+      line-height:34px;
+      text-align: center;
+      text-transform: lowercase;
+      color: #000;
+      }
+      .box {
+      width:60px;
+      height:60px;
+      padding:0;
+      margin:2px;
+      border:1px solid #353535;
+      border-radius:4px;
+      font-size:34px;
+      font-family: Arial;
+      line-height:30px;
+      text-align: center;
+      text-transform: lowercase;
+      }
+      .correct-box {
+      position: absolute;
+      width:57px;
+      height:57px;
+      padding:0;
+      margin:2px;
+      border:3px solid #008f00;
+      border-radius:4px;
+      font-size:30px;
+      font-family: Arial;
+      line-height:30px;
+      text-align: center;
+      z-index: 2;
+      }
+      .tablet .box {
+      width:40px;
+      height:40px;
+      padding:0;
+      margin:2px;
+      border:1px solid #353535;
+      border-radius:4px;
+      font-size:30px;
+      font-family: Arial;
+      line-height:30px;
+      text-align: center;
+      text-transform: lowercase;
+      }
+      .tablet .correct-box {
+      position: absolute;
+      width:40px;
+      height:40px;
+      padding:0;
+      margin:2px;
+      border:2px solid #008f00;
+      border-radius:4px;
+      font-size:30px;
+      font-family: Arial;
+      line-height:30px;
+      text-align: center;
+      z-index: 2;
+      }
+      .mobile .box {
+      width:34px;
+      height:34px;
+      padding:0;
+      margin:2px;
+      border:1px solid #353535;
+      border-radius:4px;
+      font-size:24px;
+      font-family: Arial;
+      line-height:24px;
+      text-align: center;
+      text-transform: lowercase;
+      }
+      .mobile .correct-box {
+      position: absolute;
+      width:32px;
+      height:32px;
+      padding:0;
+      margin:2px;
+      border:2px solid #008f00;
+      border-radius:4px;
+      font-size:30px;
+      font-family: Arial;
+      line-height:30px;
+      text-align: center;
+      z-index: 2;
+      }
+      .desk {
+      display: block;
+      }
+      .tablet {
+      display: none;
+      }
+      .mobile {
+      display: none;
+      }
+      .desk-rules {
+      display: block;
+      }
+      .tablet-rules {
+      display: none;
+      }
+      .mobile-rules {
+      display: none;
+      }
+      .desk-dark {
+      background-image: url("https://email-images.mindbox.ru/skyeng/82fe22e0-258f-429e-9a15-8d08daa6ccbb/d2b5611b-4b7c-4be9-8bef-40010878e226.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      }
+      .desk-bright {
+      background-image: url("https://email-images.mindbox.ru/skyeng/18a62a7b-8cb6-4d4a-974b-87882c8e79d2/2e6dc4dd-5109-4747-94fe-348f29237d78.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      }
+      .tablet-dark {
+      background-image: url("https://email-images.mindbox.ru/skyeng/72c1bc10-7aeb-498f-a119-8a109ffa4faf/669ef663-cade-402c-9e78-2074fd7f5040.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      }
+      .tablet-bright {
+      background-image: url("https://email-images.mindbox.ru/skyeng/18a62a7b-8cb6-4d4a-974b-87882c8e79d2/382596eb-1772-4556-aef5-1cac5809ac94.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      }
+      .mobile-dark {
+      background-image: url("https://email-images.mindbox.ru/skyeng/82fe22e0-258f-429e-9a15-8d08daa6ccbb/1ceb09dc-a309-4c44-812a-bb3aa4ed1048.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      }
+      .mobile-bright {
+      background-image: url("https://email-images.mindbox.ru/skyeng/18a62a7b-8cb6-4d4a-974b-87882c8e79d2/917325cf-4daf-4f57-ad37-59409364f8dc.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      }
+      @media only screen and (max-width:680px) {
+      .desk {
+      display: none;
+      }	
+      .tablet-maxw {
+      max-width:580px;
+      }
+      .tablet {
+      display: block;
+      }
+      .desk-rules {
+      display: none;
+      }
+      .tablet-rules {
+      display: block;
+      }
+      .mobile {
+      display: none;
+      }
+      }
+      @media only screen and (max-width:414px) {
+      .desk {
+      display: none;
+      }
+      .tablet-rules {
+      display: none;
+      }
+      .mobile-maxw {
+      max-width:360px;
+      }
+      .mobile-rules {
+      display: block;
+      }
+      .tablet {
+      display: none;
+      }
+      .mobile {
+      display: block;
+      }
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div class="preheader" style="font-size:0px;color:transparent;opacity:0;">Отгадайте всех — и получите подарок</div>
+    <div style="font-size:0px;color:transparent;opacity:0;">&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</div>
+    <div align="center" style="line-height: normal; word-break: normal;background-color: #000000;padding:10px 0 0 0;">
+      <div style="max-width:700px;background:#101010;border-radius:24px;" class="desk-maxw tablet-maxw mob-maxw">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="line-height: normal; border-collapse: collapse;">
+          <tr>
+            <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 16px;padding-bottom: 16px;">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:600px;">
+                <tr>
+                  <td align="center" bgcolor="#ffffff" style="background-color: #ffffff;border-radius: 60px;background-image:url(&quot;https://email-images.mindbox.ru/61c27734-22a8-4504-8d48-84070ea056ce/1.png&quot;); background-repeat: repeat;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="center" style="padding: 16px;">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td align="left">
+                                <a border="0" target="_blank" href="https://skysmart.ru/?source_type=email&utm_medium=email&utm_source=email&utm_campaign=halloween_3010%7Cparent_student%7Caction&utm_term=header%7C30102024&workflow=Straight-old&product=type-mainpage%7Cname-skysmart&manager=eshpeilo">
+                                  <amp-img width="138" height="28" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5c8c0cb5-a778-43e7-9ab9-4577e266bdfc/4b4c0dd7-8314-4ba2-87f9-6ca1eeecaf88.png" alt="" style="display: block; max-width: 138px; width: 100%; height: auto;"></amp-img>
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="">
+            <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width:600px;">
+                <tr>
+                  <td valign="top" style="padding:20px 16px 40px 16px;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                      <tr>
+                        <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:0 8px;">
+                          Сладость или гадость?
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:12px 8px 0 8px;">
+                          На&nbsp;Западе сегодня все переодеваются в&nbsp;монстров, собирают конфеты и&nbsp;закидывают дома вредных соседей туалетной бумагой. Это мило, но&nbsp;как-то не&nbsp;по-нашему, согласны? 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:12px 8px 0 8px;">
+                          А&nbsp;вот этот кроссворд&nbsp;&mdash; исключительно русский. Отгадайте всех персонажей отечественных сказок, что мы&nbsp;зашифровали, и&nbsp;получите подарок. Бу!
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="background-repeat: repeat;">
+              <div [hidden]="('' + word1letter1 + word1letter2 + word1letter3 + word1letter4 + word1letter5 + word2letter1 + word2letter2 + word2letter3 + word2letter4 + word3letter1 + word3letter2 + word3letter3 + word3letter4 + word3letter5 + word4letter1 + word4letter2 + word5letter1 + word5letter2 + word5letter3 + word5letter4 + word5letter5 + word6letter1 + word6letter2 + word6letter3 + word6letter4).toLowerCase() == 'кикмрлешйодянйийрслкапырь'" class="desk desk-dark">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 680px; min-width: 10px;">
+                  <tr>
+                    <td align="center" style="padding:100px 0 250px 0;">
+                      <form method="get" style="margin:0" novalidate="">
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word1letter1.toLowerCase() != 'к'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word1letter1" id="word1letter1" on="input-debounced:AMP.setState({word1letter1: event.value}), word1letter2.focus, deskbg.toggleClass({word1letter1.toLowerCase() == 'к' ? 'desk-bright' : ''})" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word1letter2.toLowerCase() != 'и'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word1letter2" id="word1letter2" on="input-debounced:AMP.setState({word1letter2: event.value}), word1letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word1letter3.toLowerCase() != 'к'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word1letter3" id="word1letter3" on="input-debounced:AMP.setState({word1letter3: event.value}), word1letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:132px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word2letter1.toLowerCase() != 'л'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word2letter1" id="word2letter1" on="input-debounced:AMP.setState({word2letter1: event.value}), word2letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word2letter2.toLowerCase() != 'е'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word2letter2" id="word2letter2" on="input-debounced:AMP.setState({word2letter2: event.value}), word2letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word2letter3.toLowerCase() != 'ш'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word2letter3" id="word2letter3" on="input-debounced:AMP.setState({word2letter3: event.value}), word2letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">и</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word2letter4.toLowerCase() != 'й'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word2letter4" id="word2letter4" on="input-debounced:AMP.setState({word2letter4: event.value}), word3letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:132px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word1letter4.toLowerCase() != 'м'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word1letter4" id="word1letter4" on="input-debounced:AMP.setState({word1letter4: event.value}), word1letter5.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">в</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word3letter1.toLowerCase() != 'о'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word3letter1" id="word3letter1" on="input-debounced:AMP.setState({word3letter1: event.value}), word3letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word3letter2.toLowerCase() != 'д'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word3letter2" id="word3letter2" on="input-debounced:AMP.setState({word3letter2: event.value}), word3letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word3letter3.toLowerCase() != 'я'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word3letter3" id="word3letter3" on="input-debounced:AMP.setState({word3letter3: event.value}), word3letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word3letter4.toLowerCase() != 'н'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word3letter4" id="word3letter4" on="input-debounced:AMP.setState({word3letter4: event.value}), word3letter5.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">о</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word3letter5.toLowerCase() != 'й'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word3letter5" id="word3letter5" on="input-debounced:AMP.setState({word3letter5: event.value}), word4letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:132px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word4letter1.toLowerCase() != 'и'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word4letter1" id="word4letter1" on="input-debounced:AMP.setState({word4letter1: event.value}), word4letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:264px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word1letter5.toLowerCase() != 'р'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word1letter5" id="word1letter5" on="input-debounced:AMP.setState({word1letter5: event.value}), word2letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word4letter2.toLowerCase() != 'й'" class="correct-box"></div>
+                              <input autocomplete="off" class="box" type="text" [value]="word4letter2" id="word4letter2" on="input-debounced:AMP.setState({word4letter2: event.value}), word5letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:66px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word5letter1.toLowerCase() != 'р'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word5letter1" id="word5letter1" on="input-debounced:AMP.setState({word5letter1: event.value}), word5letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">у</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word5letter2.toLowerCase() != 'с'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word5letter2" id="word5letter2" on="input-debounced:AMP.setState({word5letter2: event.value}), word5letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">а</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word5letter3.toLowerCase() != 'л'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word5letter3" id="word5letter3" on="input-debounced:AMP.setState({word5letter3: event.value}), word5letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word5letter4.toLowerCase() != 'к'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word5letter4" id="word5letter4" on="input-debounced:AMP.setState({word5letter4: event.value}), word5letter5.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word5letter5.toLowerCase() != 'а'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word5letter5" id="word5letter5" on="input-debounced:AMP.setState({word5letter5: event.value}), word6letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word6letter1.toLowerCase() != 'п'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word6letter1" id="word6letter1" on="input-debounced:AMP.setState({word6letter1: event.value}), word6letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word6letter2.toLowerCase() != 'ы'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word6letter2" id="word6letter2" on="input-debounced:AMP.setState({word6letter2: event.value}), word6letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word6letter3.toLowerCase() != 'р'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word6letter3" id="word6letter3" on="input-debounced:AMP.setState({word6letter3: event.value}), word6letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="word6letter4.toLowerCase() != 'ь'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="word6letter4" id="word6letter4" on="input-debounced:AMP.setState({word6letter4: event.value})" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                      </form>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div hidden [hidden]="('' + word1letter1 + word1letter2 + word1letter3 + word1letter4 + word1letter5 + word2letter1 + word2letter2 + word2letter3 + word2letter4 + word3letter1 + word3letter2 + word3letter3 + word3letter4 + word3letter5 + word4letter1 + word4letter2 + word5letter1 + word5letter2 + word5letter3 + word5letter4 + word5letter5 + word6letter1 + word6letter2 + word6letter3 + word6letter4).toLowerCase() != 'кикмрлешйодянйийрслкапырь'" class="desk desk-bright">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 680px; min-width: 10px;">
+                  <tr>
+                    <td align="center" style="padding:100px 0 250px 0;">
+                      <form method="get" style="margin:0" novalidate="">
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">к</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">и</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">к</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:132px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">л</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">е</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">ш</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">и</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">й</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:132px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">м</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">в</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">о</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">д</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">я</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">н</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">о</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">й</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:132px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">и</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:264px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">р</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">й</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:66px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">р</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">у</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">с</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">а</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">л</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">к</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">а</div>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">п</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">ы</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">р</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:198px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:12px 0 0 0;">ь</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:330px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                      </form>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div [hidden]="('' + tabword1letter1 + tabword1letter2 + tabword1letter3 + tabword1letter4 + tabword1letter5 + tabword2letter1 + tabword2letter2 + tabword2letter3 + tabword2letter4 + tabword3letter1 + tabword3letter2 + tabword3letter3 + tabword3letter4 + tabword3letter5 + tabword4letter1 + tabword4letter2 + tabword5letter1 + tabword5letter2 + tabword5letter3 + tabword5letter4 + tabword5letter5 + tabword6letter1 + tabword6letter2 + tabword6letter3 + tabword6letter4).toLowerCase() == 'кикмрлешйодянйийрслкапырь'" class="tablet tablet-dark">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 580px; min-width: 10px;">
+                  <tr>
+                    <td align="center" style="padding:180px 0 220px 0;">
+                      <form method="get" style="margin:0" novalidate="">
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword1letter1.toLowerCase() != 'к'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword1letter1" id="tabword1letter1" on="input-debounced:AMP.setState({tabword1letter1: event.value}), tabword1letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword1letter2.toLowerCase() != 'и'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword1letter2" id="tabword1letter2" on="input-debounced:AMP.setState({tabword1letter2: event.value}), tabword1letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword1letter3.toLowerCase() != 'к'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword1letter3" id="tabword1letter3" on="input-debounced:AMP.setState({tabword1letter3: event.value}), tabword1letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:91px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword2letter1.toLowerCase() != 'л'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword2letter1" id="tabword2letter1" on="input-debounced:AMP.setState({tabword2letter1: event.value}), tabword2letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword2letter2.toLowerCase() != 'е'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword2letter2" id="tabword2letter2" on="input-debounced:AMP.setState({tabword2letter2: event.value}), tabword2letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword2letter3.toLowerCase() != 'ш'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword2letter3" id="tabword2letter3" on="input-debounced:AMP.setState({tabword2letter3: event.value}), tabword2letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">и</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword2letter4.toLowerCase() != 'й'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword2letter4" id="tabword2letter4" on="input-debounced:AMP.setState({tabword2letter4: event.value}), tabword3letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:92px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword1letter4.toLowerCase() != 'м'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword1letter4" id="tabword1letter4" on="input-debounced:AMP.setState({tabword1letter4: event.value}), tabword1letter5.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">в</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword3letter1.toLowerCase() != 'о'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword3letter1" id="tabword3letter1" on="input-debounced:AMP.setState({tabword3letter1: event.value}), tabword3letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword3letter2.toLowerCase() != 'д'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword3letter2" id="tabword3letter2" on="input-debounced:AMP.setState({tabword3letter2: event.value}), tabword3letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword3letter3.toLowerCase() != 'я'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword3letter3" id="tabword3letter3" on="input-debounced:AMP.setState({tabword3letter3: event.value}), tabword3letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword3letter4.toLowerCase() != 'н'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword3letter4" id="tabword3letter4" on="input-debounced:AMP.setState({tabword3letter4: event.value}), tabword3letter5.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">о</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword3letter5.toLowerCase() != 'й'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword3letter5" id="tabword3letter5" on="input-debounced:AMP.setState({tabword3letter5: event.value}), tabword4letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:93px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword4letter1.toLowerCase() != 'и'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword4letter1" id="tabword4letter1" on="input-debounced:AMP.setState({tabword4letter1: event.value}), tabword4letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:184px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword1letter5.toLowerCase() != 'р'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword1letter5" id="tabword1letter5" on="input-debounced:AMP.setState({tabword1letter5: event.value}), tabword2letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword4letter2.toLowerCase() != 'й'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword4letter2" id="tabword4letter2" on="input-debounced:AMP.setState({tabword4letter2: event.value}), tabword5letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:46px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword5letter1.toLowerCase() != 'р'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword5letter1" id="tabword5letter1" on="input-debounced:AMP.setState({tabword5letter1: event.value}), tabword5letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">у</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword5letter2.toLowerCase() != 'с'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword5letter2" id="tabword5letter2" on="input-debounced:AMP.setState({tabword5letter2: event.value}), tabword5letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">а</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword5letter3.toLowerCase() != 'л'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword5letter3" id="tabword5letter3" on="input-debounced:AMP.setState({tabword5letter3: event.value}), tabword5letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword5letter4.toLowerCase() != 'к'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword5letter4" id="tabword5letter4" on="input-debounced:AMP.setState({tabword5letter4: event.value}), tabword5letter5.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword5letter5.toLowerCase() != 'а'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword5letter5" id="tabword5letter5" on="input-debounced:AMP.setState({tabword5letter5: event.value}), tabword6letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword6letter1.toLowerCase() != 'п'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword6letter1" id="tabword6letter1" on="input-debounced:AMP.setState({tabword6letter1: event.value}), tabword6letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword6letter2.toLowerCase() != 'ы'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword6letter2" id="tabword6letter2" on="input-debounced:AMP.setState({tabword6letter2: event.value}), tabword6letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword6letter3.toLowerCase() != 'р'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword6letter3" id="tabword6letter3" on="input-debounced:AMP.setState({tabword6letter3: event.value}), tabword6letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="tabword6letter4.toLowerCase() != 'ь'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="tabword6letter4" id="tabword6letter4" on="input-debounced:AMP.setState({tabword6letter4: event.value})" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                      </form>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div hidden [hidden]="('' + tabword1letter1 + tabword1letter2 + tabword1letter3 + tabword1letter4 + tabword1letter5 + tabword2letter1 + tabword2letter2 + tabword2letter3 + tabword2letter4 + tabword3letter1 + tabword3letter2 + tabword3letter3 + tabword3letter4 + tabword3letter5 + tabword4letter1 + tabword4letter2 + tabword5letter1 + tabword5letter2 + tabword5letter3 + tabword5letter4 + tabword5letter5 + tabword6letter1 + tabword6letter2 + tabword6letter3 + tabword6letter4).toLowerCase() != 'кикмрлешйодянйийрслкапырь'" class="tablet tablet-bright">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 580px; min-width: 10px;">
+                  <tr>
+                    <td align="center" style="padding:180px 0 220px 0;">
+                      <form method="get" style="margin:0" novalidate="">
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">к</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">и</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">к</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:91px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">л</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">е</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">ш</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">и</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">й</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:92px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">м</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">в</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">о</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">д</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">я</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">н</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">о</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">й</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:93px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">и</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:184px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">р</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">й</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:46px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">р</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">у</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">с</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">а</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">л</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">к</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">а</div>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">п</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">ы</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">р</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:139px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">ь</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:231px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                      </form>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div [hidden]="('' + mobword1letter1 + mobword1letter2 + mobword1letter3 + mobword1letter4 + mobword1letter5 + mobword2letter1 + mobword2letter2 + mobword2letter3 + mobword2letter4 + mobword3letter1 + mobword3letter2 + mobword3letter3 + mobword3letter4 + mobword3letter5 + mobword4letter1 + mobword4letter2).toLowerCase() == 'кикмрлешйодянйий'" class="mobile mobile-dark" style="max-width:416px;">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 360px; min-width: 10px;">
+                  <tr>
+                    <td align="center" style="padding:120px 0 180px 0;">
+                      <form method="get" style="margin:0" novalidate="">
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:200px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword1letter1.toLowerCase() != 'к'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword1letter1" id="mobword1letter1" on="input-debounced:AMP.setState({mobword1letter1: event.value}), mobword1letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:40px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:200px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword1letter2.toLowerCase() != 'и'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword1letter2" id="mobword1letter2" on="input-debounced:AMP.setState({mobword1letter2: event.value}), mobword1letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:40px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:200px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword1letter3.toLowerCase() != 'к'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword1letter3" id="mobword1letter3" on="input-debounced:AMP.setState({mobword1letter3: event.value}), mobword1letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:40px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:80px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword2letter1.toLowerCase() != 'л'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword2letter1" id="mobword2letter1" on="input-debounced:AMP.setState({mobword2letter1: event.value}), mobword2letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword2letter2.toLowerCase() != 'е'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword2letter2" id="mobword2letter2" on="input-debounced:AMP.setState({mobword2letter2: event.value}), mobword2letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword2letter3.toLowerCase() != 'ш'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword2letter3" id="mobword2letter3" on="input-debounced:AMP.setState({mobword2letter3: event.value}), mobword2letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">и</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword2letter4.toLowerCase() != 'й'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword2letter4" id="mobword2letter4" on="input-debounced:AMP.setState({mobword2letter4: event.value}), mobword3letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:200px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword1letter4.toLowerCase() != 'м'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword1letter4" id="mobword1letter4" on="input-debounced:AMP.setState({mobword1letter4: event.value}), mobword1letter5.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:40px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">в</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword3letter1.toLowerCase() != 'о'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword3letter1" id="mobword3letter1" on="input-debounced:AMP.setState({mobword3letter1: event.value}), mobword3letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword3letter2.toLowerCase() != 'д'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword3letter2" id="mobword3letter2" on="input-debounced:AMP.setState({mobword3letter2: event.value}), mobword3letter3.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword3letter3.toLowerCase() != 'я'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword3letter3" id="mobword3letter3" on="input-debounced:AMP.setState({mobword3letter3: event.value}), mobword3letter4.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword3letter4.toLowerCase() != 'н'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword3letter4" id="mobword3letter4" on="input-debounced:AMP.setState({mobword3letter4: event.value}), mobword3letter5.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">о</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword3letter5.toLowerCase() != 'й'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword3letter5" id="mobword3letter5" on="input-debounced:AMP.setState({mobword3letter5: event.value}), mobword4letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword4letter1.toLowerCase() != 'и'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword4letter1" id="mobword4letter1" on="input-debounced:AMP.setState({mobword4letter1: event.value}), mobword4letter2.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:160px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword1letter5.toLowerCase() != 'р'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword1letter5" id="mobword1letter5" on="input-debounced:AMP.setState({mobword1letter5: event.value}), mobword1letter6.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:40px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword4letter2.toLowerCase() != 'й'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword4letter2" id="mobword4letter2" on="input-debounced:AMP.setState({mobword4letter2: event.value})" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:160px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div hidden [hidden]="mobword1letter6.toLowerCase() != 'а'" class="correct-box"></div>
+                              <input class="box" type="text" [value]="mobword1letter6" id="mobword1letter6" on="input-debounced:AMP.setState({mobword1letter6: event.value}), mobword2letter1.focus" pattern="[А-Яа-яЁё]" maxlength="1" required="" title="буква">
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:40px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                      </form>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div hidden [hidden]="('' + mobword1letter1 + mobword1letter2 + mobword1letter3 + mobword1letter4 + mobword1letter5 + mobword2letter1 + mobword2letter2 + mobword2letter3 + mobword2letter4 + mobword3letter1 + mobword3letter2 + mobword3letter3 + mobword3letter4 + mobword3letter5 + mobword4letter1 + mobword4letter2).toLowerCase() != 'кикмрлешйодянйий'" class="mobile mobile-bright" style="max-width:416px;">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 360px; min-width: 10px;">
+                  <tr>
+                    <td align="center" style="padding:120px 0 180px 0;">
+                      <form method="get" style="margin:0" novalidate="">
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:200px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">к</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:40px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:200px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">и</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:40px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:200px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">к</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:40px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:80px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">л</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">е</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">ш</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">и</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">й</div>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div style="width:200px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">м</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:40px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">в</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">о</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">д</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">я</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">н</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">о</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">й</div>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">и</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:160px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">р</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:40px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">й</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:160px;">&nbsp;</div>
+                            </td>
+                            <td style="position:relative;">
+                              <div class="box box-done">
+                                <div style="padding:4px 0 0 0;">а</div>
+                              </div>
+                            </td>
+                            <td style="position:relative;">
+                              <div style="width:40px;">&nbsp;</div>
+                            </td>
+                          </tr>
+                        </table>
+                      </form>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#000000" align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr class="">
+                  <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 30px;padding-bottom: 0px;">
+                    <div [hidden]="('' + word1letter1 + word1letter2 + word1letter3 + word1letter4 + word1letter5 + word2letter1 + word2letter2 + word2letter3 + word2letter4 + word3letter1 + word3letter2 + word3letter3 + word3letter4 + word3letter5 + word4letter1 + word4letter2 + word5letter1 + word5letter2 + word5letter3 + word5letter4 + word5letter5 + word6letter1 + word6letter2 + word6letter3 + word6letter4).toLowerCase() == 'кикмрлешйодянйийрслкапырь'" class="desk-rules" style="background-color:#262626;width:100%;max-width:600px;border-radius:24px;">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width:600px;">
+                        <tr>
+                          <td valign="top" style="padding:22px 16px 26px 16px;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 18px;line-height: 22px; color: #ffffff;padding:0 8px;">
+                                  По&nbsp;вертикали: <br>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  1. Она бывает какой угодно, но&nbsp;мы&nbsp;привыкли называть её&nbsp;болотной.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Кикимора</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  2. В&nbsp;Румынии таких зовут вампирами, а&nbsp;по-нашему это...
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Упырь</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  3. Срочно поднимите ему веки, иначе тако-ое случится!..
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Вий</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 18px;line-height: 22px; color: #ffffff;padding:20px 8px 0 8px;">
+                                  По&nbsp;горизонтали:
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  4. Хозяин леса, что понятно по&nbsp;имени.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Леший</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  5. С&nbsp;ним никто не&nbsp;водится 😢
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Водяной</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  6. Не&nbsp;сирена, не&nbsp;ундина, а&nbsp;просто...
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Русалка</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div [hidden]="('' + tabword1letter1 + tabword1letter2 + tabword1letter3 + tabword1letter4 + tabword1letter5 + tabword2letter1 + tabword2letter2 + tabword2letter3 + tabword2letter4 + tabword3letter1 + tabword3letter2 + tabword3letter3 + tabword3letter4 + tabword3letter5 + tabword4letter1 + tabword4letter2 + tabword5letter1 + tabword5letter2 + tabword5letter3 + tabword5letter4 + tabword5letter5 + tabword6letter1 + tabword6letter2 + tabword6letter3 + tabword6letter4).toLowerCase() == 'кикмрлешйодянйийрслкапырь'" class="tablet-rules" style="background-color:#262626;width:100%;max-width:600px;border-radius:24px;">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width:600px;">
+                        <tr>
+                          <td valign="top" style="padding:22px 16px 26px 16px;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 18px;line-height: 22px; color: #ffffff;padding:0 8px;">
+                                  По&nbsp;вертикали: <br>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  1. Она бывает какой угодно, но&nbsp;мы&nbsp;привыкли называть её&nbsp;болотной.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Кикимора</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  2. В&nbsp;Румынии таких зовут вампирами, а&nbsp;по-нашему это...
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Упырь</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  3. Срочно поднимите ему веки, иначе тако-ое случится!..
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Вий</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 18px;line-height: 22px; color: #ffffff;padding:20px 8px 0 8px;">
+                                  По&nbsp;горизонтали:
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  4. Хозяин леса, что понятно по&nbsp;имени.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Леший</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  5. С&nbsp;ним никто не&nbsp;водится 😢
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Водяной</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  6. Не&nbsp;сирена, не&nbsp;ундина, а&nbsp;просто...
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Русалка</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div [hidden]="('' + mobword1letter1 + mobword1letter2 + mobword1letter3 + mobword1letter4 + mobword1letter5 + mobword2letter1 + mobword2letter2 + mobword2letter3 + mobword2letter4 + mobword3letter1 + mobword3letter2 + mobword3letter3 + mobword3letter4 + mobword3letter5 + mobword4letter1 + mobword4letter2).toLowerCase() == 'кикмрлешйодянйий'" class="mobile-rules" style="background-color:#262626;width:100%;max-width:600px;border-radius:24px;">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width:600px;">
+                        <tr>
+                          <td valign="top" style="padding:22px 16px 26px 16px;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-spacing: 0px;">
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 18px;line-height: 22px; color: #ffffff;padding:0 8px;">
+                                  По&nbsp;вертикали: <br>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  1. Она бывает какой угодно, но&nbsp;мы&nbsp;привыкли называть её&nbsp;болотной.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Кикимора</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  2. Срочно поднимите ему веки, иначе тако-ое случится!..
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Вий</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 18px;line-height: 22px; color: #ffffff;padding:20px 8px 0 8px;">
+                                  По&nbsp;горизонтали:
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  3. Хозяин леса, что понятно по&nbsp;имени.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Леший</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #ffffff;padding:10px 8px 0 8px;">
+                                  4. С&nbsp;ним никто не&nbsp;водится 😢
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:8px 16px 0 26px;">
+                                  <amp-accordion id="my-accordion" animate expand-single-section >
+                                    <section>
+                                      <header class="ac-header">
+                                        <span style="color:#7f7f7f;font-family:Arial;font-size:16px;line-height:16px;text-align:left;text-decoration: underline;">Посмотреть ответ</span>
+                                      </header>
+                                      <div>
+                                        <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                          <tr>
+                                            <td style="padding:10px 0 0 0;text-align:center">
+                                              <div style="display:inline-block;vertical-align:top;width:100%">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;border-spacing:0" role="none">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td align="left" style="padding:0 0 0 0;">
+                                                        <span style="color:#ffffff;font-family:Arial;font-size:16px;line-height:16px;text-align:left;font-style: italic;">Водяной</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                    </section>
+                                  </amp-accordion>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;">
+                    <div class="desk" id="final-desk" hidden [hidden]="('' + word1letter1 + word1letter2 + word1letter3 + word1letter4 + word1letter5 + word2letter1 + word2letter2 + word2letter3 + word2letter4 + word3letter1 + word3letter2 + word3letter3 + word3letter4 + word3letter5 + word4letter1 + word4letter2 + word5letter1 + word5letter2 + word5letter3 + word5letter4 + word5letter5 + word6letter1 + word6letter2 + word6letter3 + word6letter4).toLowerCase() != 'кикмрлешйодянйийрслкапырь'">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:582px;">
+                        <tr>
+                          <td align="center" style="padding: 40px 6px 16px;">
+                            <table bgcolor="#f5f5d6" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-radius:24px;background-color:#f5f5d6;box-shadow:0 0 15px #ffffff;">
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:20px 20px 0 20px;">
+                                  Ну&nbsp;всё, теперь чудища надёжно заперты в&nbsp;шкафу до&nbsp;следующего Хеллоуина. А&nbsp;вам просили передать, что вы&nbsp;обронили промокод <span style="font-weight: bold;color:#FB8023;">CATCH</span> с&nbsp;выгодой до&nbsp;40% на&nbsp;любые детские курсы в&nbsp;Skysmart. 
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding:30px 20px 10px 20px;">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td align="center" style="border:2px dashed #FB8023;padding:15px 40px;font-family: Helvetica, Arial, sans-serif;font-size: 24px;line-height: 24px;font-weight: bold; color: #FB8023;border-radius:16px;">
+                                        CATCH
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:12px 20px 0 20px;">
+                                  С&nbsp;нами ребята перестанут бояться знаний, влюбятся в&nbsp;учёбу и&nbsp;найдут путь к&nbsp;пятёркам быстрее, чем Иван Царевич нашёл жизнь Кощея в&nbsp;игле&nbsp;✨
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:16px 20px 20px 20px;">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 254px; border-spacing: 0px;">
+                                    <tr>
+                                      <td align="center" valign="middle" bgcolor="#FB8023" height="46" style="background-color: #FB8023; border-radius: 10px;">
+                                        <a href="https://student.skyeng.ru/product-showcase?source_type=email&utm_medium=email&utm_source=email&utm_campaign=halloween_3010%7Cparent_student%7Caction&utm_term=header%7C30102024&workflow=Straight-old&product=type-skysmart%7Cname-product_showcase&manager=eshpeilo&promocode=CATCH" border="0" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height: 46px; white-space: nowrap; color:#ffffff; text-decoration: none; padding-left: 10px; padding-right: 10px; font-weight: bold; display: block;"><span>
+                                        Воспользоваться выгодой
+                                        </span></a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="tablet" id="final-tablet" hidden [hidden]="('' + tabword1letter1 + tabword1letter2 + tabword1letter3 + tabword1letter4 + tabword1letter5 + tabword2letter1 + tabword2letter2 + tabword2letter3 + tabword2letter4 + tabword3letter1 + tabword3letter2 + tabword3letter3 + tabword3letter4 + tabword3letter5 + tabword4letter1 + tabword4letter2 + tabword5letter1 + tabword5letter2 + tabword5letter3 + tabword5letter4 + tabword5letter5 + tabword6letter1 + tabword6letter2 + tabword6letter3 + tabword6letter4).toLowerCase() != 'кикмрлешйодянйийрслкапырь'">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:582px;">
+                        <tr>
+                          <td align="center" style="padding: 40px 6px 16px;">
+                            <table bgcolor="#f5f5d6" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-radius:24px;box-shadow:0 0 15px #ffffff;">
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:20px 20px 0 20px;">
+                                  Ну&nbsp;всё, теперь чудища надёжно заперты в&nbsp;шкафу до&nbsp;следующего Хеллоуина. А&nbsp;вам просили передать, что вы&nbsp;обронили промокод <span style="font-weight: bold;color:#FB8023;">CATCH</span> с&nbsp;выгодой до&nbsp;40% на&nbsp;любые детские курсы в&nbsp;Skysmart. 
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding:30px 20px 10px 20px;">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td align="center" style="border:2px dashed #FB8023;padding:15px 40px;font-family: Helvetica, Arial, sans-serif;font-size: 24px;line-height: 24px;font-weight: bold; color: #FB8023;border-radius:16px;">
+                                        CATCH
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:12px 20px 0 20px;">
+                                  С&nbsp;нами ребята перестанут бояться знаний, влюбятся в&nbsp;учёбу и&nbsp;найдут путь к&nbsp;пятёркам быстрее, чем Иван Царевич нашёл жизнь Кощея в&nbsp;игле&nbsp;✨
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:16px 20px 20px 20px;">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 254px; border-spacing: 0px;">
+                                    <tr>
+                                      <td align="center" valign="middle" bgcolor="#FB8023" height="46" style="background-color: #FB8023; border-radius: 10px;">
+                                        <a href="https://student.skyeng.ru/product-showcase?source_type=email&utm_medium=email&utm_source=email&utm_campaign=halloween_3010%7Cparent_student%7Caction&utm_term=header%7C30102024&workflow=Straight-old&product=type-skysmart%7Cname-product_showcase&manager=eshpeilo&promocode=CATCH" border="0" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height: 46px; white-space: nowrap; color:#ffffff; text-decoration: none; padding-left: 10px; padding-right: 10px; font-weight: bold; display: block;"><span>
+                                        Воспользоваться выгодой
+                                        </span></a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="mobile" id="final-mobile" hidden [hidden]="('' + mobword1letter1 + mobword1letter2 + mobword1letter3 + mobword1letter4 + mobword1letter5 + mobword2letter1 + mobword2letter2 + mobword2letter3 + mobword2letter4 + mobword3letter1 + mobword3letter2 + mobword3letter3 + mobword3letter4 + mobword3letter5 + mobword4letter1 + mobword4letter2).toLowerCase() != 'кикмрлешйодянйий'">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:582px;">
+                        <tr>
+                          <td align="center" style="padding: 40px 6px 16px;">
+                            <table bgcolor="#f5f5d6" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-radius:24px;background-color:#f5f5d6;box-shadow:0 0 15px #ffffff;">
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:20px 20px 0 20px;">
+                                  Ну&nbsp;всё, теперь чудища надёжно заперты в&nbsp;шкафу до&nbsp;следующего Хеллоуина. А&nbsp;вам просили передать, что вы&nbsp;обронили промокод <span style="font-weight: bold;color:#FB8023;">CATCH</span> с&nbsp;выгодой до&nbsp;40% на&nbsp;любые детские курсы в&nbsp;Skysmart. 
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding:30px 20px 10px 20px;">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td align="center" style="border:2px dashed #FB8023;padding:15px 40px;font-family: Helvetica, Arial, sans-serif;font-size: 24px;line-height: 24px;font-weight: bold; color: #FB8023;border-radius:16px;">
+                                        CATCH
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" valign="top" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #000000;padding:12px 20px 0 20px;">
+                                  С&nbsp;нами ребята перестанут бояться знаний, влюбятся в&nbsp;учёбу и&nbsp;найдут путь к&nbsp;пятёркам быстрее, чем Иван Царевич нашёл жизнь Кощея в&nbsp;игле&nbsp;✨
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding:16px 20px 20px 20px;">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 254px; border-spacing: 0px;">
+                                    <tr>
+                                      <td align="center" valign="middle" bgcolor="#FB8023" height="46" style="background-color: #FB8023; border-radius: 10px;">
+                                        <a href="https://student.skyeng.ru/product-showcase?source_type=email&utm_medium=email&utm_source=email&utm_campaign=halloween_3010%7Cparent_student%7Caction&utm_term=header%7C30102024&workflow=Straight-old&product=type-skysmart%7Cname-product_showcase&manager=eshpeilo&promocode=CATCH" border="0" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height: 46px; white-space: nowrap; color:#ffffff; text-decoration: none; padding-left: 10px; padding-right: 10px; font-weight: bold; display: block;"><span>
+                                        Воспользоваться выгодой
+                                        </span></a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td align="center" style="padding: 40px 16px 24px;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="center" style="padding-bottom:12px;">
+                          <amp-img width="58" height="40" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5c8c0cb5-a778-43e7-9ab9-4577e266bdfc/b9c7d860-f306-4a7e-8ac2-15a3f67893f0.png" alt="" style="display: block; max-width: 58px; width: 100%; height: auto;"></amp-img>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 22px; color: #D9D9D9;padding-bottom: 5px; font-weight: bold;">Желаем успешного года,</td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px; color: #858585;">Ваш Skysmart</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#000000" align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 16px;">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:552px;">
+                <tr>
+                  <td align="center" bgcolor="#1f1f1f" style="padding: 16px 10px; background-color: #1f1f1f;border-radius: 24px;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="center" style="padding:0px 6px 20px;">
+                          <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td align="left" valign="middle">
+                                <a href="https://webfooter.onelink.me/h3HI/website" border="0" target="_blank">
+                                  <amp-img width="24" height="24" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5c8c0cb5-a778-43e7-9ab9-4577e266bdfc/c65fbbb2-4948-409b-b23d-22484c17779c.png" width="24" height="24" alt="" style="display: block; width: 24px; height: 24px;"></amp-img>
+                                </a>
+                              </td>
+                              <td align="left" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;line-height: 24px; color: #FB8023;padding-left: 1px; font-weight: bold; white-space: nowrap;">
+                                <a href="https://webfooter.onelink.me/h3HI/website" border="0" target="_blank" style="color:#FB8023;text-decoration: none;"><span>Скачать приложение Skysmart</span></a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" style="padding:0px 6px 18px;">
+                          <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px; color: #858585;">Задайте вопрос <a href="https://skysmart.ru/?source_type=email&utm_medium=email&utm_source=email&utm_campaign=halloween_3010%7Cparent_student%7Caction&utm_term=footer%7C30102024&workflow=Straight-old&product=type-mainpage%7Cname-skysmart&manager=eshpeilo"
+                                border="0" target="_blank" style="color:#858585;text-decoration: underline;">на&nbsp;сайте</a> или&nbsp;свяжитесь с&nbsp;нами:</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" style="padding:0px 6px;">
+                          <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td align="left" valign="middle" style="padding-right:12px;">
+                                <a href="https://vk.com/skysmart_parents" border="0" target="_blank">
+                                  <amp-img width="32" height="32" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5c8c0cb5-a778-43e7-9ab9-4577e266bdfc/36efb690-0e42-49fd-9fba-9003b52a51fb.png" alt="" style="display: block; width: 32px; height: 32px;"></amp-img>
+                                </a>
+                              </td>
+                              <td align="left" valign="middle" style="padding-right:12px;">
+                                <a href="https://www.youtube.com/c/SkysmartParents" border="0" target="_blank">
+                                  <amp-img width="32" height="32" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5c8c0cb5-a778-43e7-9ab9-4577e266bdfc/acc71601-829d-4b49-9394-006a95eb6130.png" alt="" style="display: block; width: 32px; height: 32px;"></amp-img>
+                                </a>
+                              </td>
+                              <td align="left" valign="middle">
+                                <a border="0" target="_blank" href="https://t.me/skysmart_main_bot">
+                                  <amp-img width="32" height="32" layout="responsive" src="https://email-images.mindbox.ru/skyeng/5c8c0cb5-a778-43e7-9ab9-4577e266bdfc/e938b5df-e5da-4ff5-850a-c0c1a725b86a.png" alt="" style="display: block; width: 32px; height: 32px;"></amp-img>
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#000000" align="center" style="padding-left: 10px;padding-right: 10px;padding-top: 0px;padding-bottom: 0px;display:none;">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td align="center" style="padding: 0px 16px 32px;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px; color: #858585;padding-bottom: 12px;">
+                          <span style="font-weight: bold;">Вы&nbsp;получили это письмо, так как подписаны на&nbsp;рассылку от&nbsp;Skysmart.</span><br>Чтобы отписаться, перейдите <a href="https://study.skyeng.ru/unsubscribe-skysmart?ticket=${ticket.EmailConfirmationLinkTicket}" border="0" target="_blank" style="color:#858585;text-decoration: underline;">по&nbsp;ссылке</a>. Данное предложение не&nbsp;является офертой.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px; color: #858585;">
+                          <a href="${Message.AccessibilityLink}" border="0" target="_blank" style="color:#858585;text-decoration: underline;"><span>Открыть в&nbsp;браузере</span></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1563 @@
+<!doctype html>
+<html ⚡4email lang="ru">
+  <head>
+    <!-- только для веб-версии, в отправляемом файле этого тега нет -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <style amp4email-boilerplate>
+      body {
+        visibility: hidden;
+      }
+    </style>
+    <style amp-custom>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #eef3f9;
+        font: 16px/22px Helvetica,Arial,sans-serif;
+        color: #091e2a;
+      }
+      .email {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        background: #eef3f9;
+        overflow: hidden;
+      }
+      .hdr {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border-radius: 60px;
+        padding: 16px;
+        margin: 24px 24px 0;
+      }
+      .hdr a {
+        display: block;
+        line-height: 0;
+      }
+      .hdr-note {
+        font-size: 12px;
+        line-height: 14px;
+        color: #858585;
+        white-space: nowrap;
+      }
+      .h1box {
+        position: relative;
+        margin-top: 24px;
+        padding: 16px 0 12px;
+      }
+      .h1 {
+        margin: 0;
+        padding: 0 88px;
+        font-size: 32px;
+        line-height: 37px;
+        font-weight: 700;
+        text-align: center;
+      }
+      .dec {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .dec-bolt {
+        left: 8px;
+        top: -36px;
+        width: 96px;
+        height: 89px;
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/0caa8766-bd03-48c9-bc08-3307f2529faf.png");
+      }
+      .dec-heart {
+        right: 62px;
+        top: 6px;
+        width: 28px;
+        height: 28px;
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/efb6111b-da50-480c-a6e1-e6374e47c903.png");
+      }
+      .dec-wave {
+        right: 95px;
+        top: 48px;
+        width: 90px;
+        height: 9px;
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/e86a5572-1ae4-46ec-af8c-4cac3f9ebb57.png");
+      }
+      .txts {
+        margin-top: 24px;
+      }
+      .txt {
+        margin: 0 0 12px;
+        padding: 0 40px;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+      }
+      .promo {
+        margin: 0 40px;
+        padding: 17px;
+        border: 2px dashed #d571ff;
+        border-radius: 24px;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+      }
+      .stage {
+        position: relative;
+        height: 515px;
+        margin: 24px 0 0;
+        overflow: hidden;
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/fbaeeb52-c4b9-4dbd-95dc-09d88c866898.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 600px 515px;
+      }
+      .globe {
+        position: absolute;
+        left: 174px;
+        top: 37px;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #8fc9e8;
+        cursor: pointer;
+        box-shadow: 0 18px 38px rgba(11,43,74,.32);
+      }
+      .tilt {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 260px;
+        height: 260px;
+        transform: rotate(-22deg) scale(1.15);
+      }
+      .lane {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 21840px;
+        height: 260px;
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/eeca9923-6800-4e69-bca5-f4a7c7bdf787.png");
+        background-repeat: repeat-x;
+        background-size: 520px 260px;
+        transition: transform 4300ms cubic-bezier(0.4,0.08,0.15,1);
+      }
+      .grid {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: repeating-linear-gradient(90deg, rgba(28,74,110,.13) 0,rgba(28,74,110,.13) 1px, rgba(255,255,255,0) 1px,rgba(255,255,255,0) 65px);
+      }
+      .shade {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 50%;
+        box-shadow: inset 0 0 30px rgba(10,44,74,.40);
+        background: radial-gradient(circle at 30% 24%,rgba(255,255,255,.50),rgba(255,255,255,0) 46%), radial-gradient(circle at 76% 80%,rgba(12,40,66,.38),rgba(12,40,66,0) 62%);
+      }
+      .p0-0 {
+        transform: translateX(-130px);
+      }
+      .p0-1 {
+        transform: translateX(-125px);
+      }
+      .p0-2 {
+        transform: translateX(-148px);
+      }
+      .p0-3 {
+        transform: translateX(-133px);
+      }
+      .p0-4 {
+        transform: translateX(-149px);
+      }
+      .p0-5 {
+        transform: translateX(-117px);
+      }
+      .p0-6 {
+        transform: translateX(-177px);
+      }
+      .p0-7 {
+        transform: translateX(-298px);
+      }
+      .p0-8 {
+        transform: translateX(-313px);
+      }
+      .p0-9 {
+        transform: translateX(-332px);
+      }
+      .p1-0 {
+        transform: translateX(-1170px);
+      }
+      .p1-1 {
+        transform: translateX(-1165px);
+      }
+      .p1-2 {
+        transform: translateX(-1188px);
+      }
+      .p1-3 {
+        transform: translateX(-1173px);
+      }
+      .p1-4 {
+        transform: translateX(-1189px);
+      }
+      .p1-5 {
+        transform: translateX(-1157px);
+      }
+      .p1-6 {
+        transform: translateX(-1217px);
+      }
+      .p1-7 {
+        transform: translateX(-1338px);
+      }
+      .p1-8 {
+        transform: translateX(-1353px);
+      }
+      .p1-9 {
+        transform: translateX(-1372px);
+      }
+      .p2-0 {
+        transform: translateX(-2210px);
+      }
+      .p2-1 {
+        transform: translateX(-2205px);
+      }
+      .p2-2 {
+        transform: translateX(-2228px);
+      }
+      .p2-3 {
+        transform: translateX(-2213px);
+      }
+      .p2-4 {
+        transform: translateX(-2229px);
+      }
+      .p2-5 {
+        transform: translateX(-2197px);
+      }
+      .p2-6 {
+        transform: translateX(-2257px);
+      }
+      .p2-7 {
+        transform: translateX(-2378px);
+      }
+      .p2-8 {
+        transform: translateX(-2393px);
+      }
+      .p2-9 {
+        transform: translateX(-2412px);
+      }
+      .p3-0 {
+        transform: translateX(-3250px);
+      }
+      .p3-1 {
+        transform: translateX(-3245px);
+      }
+      .p3-2 {
+        transform: translateX(-3268px);
+      }
+      .p3-3 {
+        transform: translateX(-3253px);
+      }
+      .p3-4 {
+        transform: translateX(-3269px);
+      }
+      .p3-5 {
+        transform: translateX(-3237px);
+      }
+      .p3-6 {
+        transform: translateX(-3297px);
+      }
+      .p3-7 {
+        transform: translateX(-3418px);
+      }
+      .p3-8 {
+        transform: translateX(-3433px);
+      }
+      .p3-9 {
+        transform: translateX(-3452px);
+      }
+      .p4-0 {
+        transform: translateX(-4290px);
+      }
+      .p4-1 {
+        transform: translateX(-4285px);
+      }
+      .p4-2 {
+        transform: translateX(-4308px);
+      }
+      .p4-3 {
+        transform: translateX(-4293px);
+      }
+      .p4-4 {
+        transform: translateX(-4309px);
+      }
+      .p4-5 {
+        transform: translateX(-4277px);
+      }
+      .p4-6 {
+        transform: translateX(-4337px);
+      }
+      .p4-7 {
+        transform: translateX(-4458px);
+      }
+      .p4-8 {
+        transform: translateX(-4473px);
+      }
+      .p4-9 {
+        transform: translateX(-4492px);
+      }
+      .p5-0 {
+        transform: translateX(-5330px);
+      }
+      .p5-1 {
+        transform: translateX(-5325px);
+      }
+      .p5-2 {
+        transform: translateX(-5348px);
+      }
+      .p5-3 {
+        transform: translateX(-5333px);
+      }
+      .p5-4 {
+        transform: translateX(-5349px);
+      }
+      .p5-5 {
+        transform: translateX(-5317px);
+      }
+      .p5-6 {
+        transform: translateX(-5377px);
+      }
+      .p5-7 {
+        transform: translateX(-5498px);
+      }
+      .p5-8 {
+        transform: translateX(-5513px);
+      }
+      .p5-9 {
+        transform: translateX(-5532px);
+      }
+      .p6-0 {
+        transform: translateX(-6370px);
+      }
+      .p6-1 {
+        transform: translateX(-6365px);
+      }
+      .p6-2 {
+        transform: translateX(-6388px);
+      }
+      .p6-3 {
+        transform: translateX(-6373px);
+      }
+      .p6-4 {
+        transform: translateX(-6389px);
+      }
+      .p6-5 {
+        transform: translateX(-6357px);
+      }
+      .p6-6 {
+        transform: translateX(-6417px);
+      }
+      .p6-7 {
+        transform: translateX(-6538px);
+      }
+      .p6-8 {
+        transform: translateX(-6553px);
+      }
+      .p6-9 {
+        transform: translateX(-6572px);
+      }
+      .p7-0 {
+        transform: translateX(-7410px);
+      }
+      .p7-1 {
+        transform: translateX(-7405px);
+      }
+      .p7-2 {
+        transform: translateX(-7428px);
+      }
+      .p7-3 {
+        transform: translateX(-7413px);
+      }
+      .p7-4 {
+        transform: translateX(-7429px);
+      }
+      .p7-5 {
+        transform: translateX(-7397px);
+      }
+      .p7-6 {
+        transform: translateX(-7457px);
+      }
+      .p7-7 {
+        transform: translateX(-7578px);
+      }
+      .p7-8 {
+        transform: translateX(-7593px);
+      }
+      .p7-9 {
+        transform: translateX(-7612px);
+      }
+      .p8-0 {
+        transform: translateX(-8450px);
+      }
+      .p8-1 {
+        transform: translateX(-8445px);
+      }
+      .p8-2 {
+        transform: translateX(-8468px);
+      }
+      .p8-3 {
+        transform: translateX(-8453px);
+      }
+      .p8-4 {
+        transform: translateX(-8469px);
+      }
+      .p8-5 {
+        transform: translateX(-8437px);
+      }
+      .p8-6 {
+        transform: translateX(-8497px);
+      }
+      .p8-7 {
+        transform: translateX(-8618px);
+      }
+      .p8-8 {
+        transform: translateX(-8633px);
+      }
+      .p8-9 {
+        transform: translateX(-8652px);
+      }
+      .p9-0 {
+        transform: translateX(-9490px);
+      }
+      .p9-1 {
+        transform: translateX(-9485px);
+      }
+      .p9-2 {
+        transform: translateX(-9508px);
+      }
+      .p9-3 {
+        transform: translateX(-9493px);
+      }
+      .p9-4 {
+        transform: translateX(-9509px);
+      }
+      .p9-5 {
+        transform: translateX(-9477px);
+      }
+      .p9-6 {
+        transform: translateX(-9537px);
+      }
+      .p9-7 {
+        transform: translateX(-9658px);
+      }
+      .p9-8 {
+        transform: translateX(-9673px);
+      }
+      .p9-9 {
+        transform: translateX(-9692px);
+      }
+      .p10-0 {
+        transform: translateX(-10530px);
+      }
+      .p10-1 {
+        transform: translateX(-10525px);
+      }
+      .p10-2 {
+        transform: translateX(-10548px);
+      }
+      .p10-3 {
+        transform: translateX(-10533px);
+      }
+      .p10-4 {
+        transform: translateX(-10549px);
+      }
+      .p10-5 {
+        transform: translateX(-10517px);
+      }
+      .p10-6 {
+        transform: translateX(-10577px);
+      }
+      .p10-7 {
+        transform: translateX(-10698px);
+      }
+      .p10-8 {
+        transform: translateX(-10713px);
+      }
+      .p10-9 {
+        transform: translateX(-10732px);
+      }
+      .p11-0 {
+        transform: translateX(-11570px);
+      }
+      .p11-1 {
+        transform: translateX(-11565px);
+      }
+      .p11-2 {
+        transform: translateX(-11588px);
+      }
+      .p11-3 {
+        transform: translateX(-11573px);
+      }
+      .p11-4 {
+        transform: translateX(-11589px);
+      }
+      .p11-5 {
+        transform: translateX(-11557px);
+      }
+      .p11-6 {
+        transform: translateX(-11617px);
+      }
+      .p11-7 {
+        transform: translateX(-11738px);
+      }
+      .p11-8 {
+        transform: translateX(-11753px);
+      }
+      .p11-9 {
+        transform: translateX(-11772px);
+      }
+      .p12-0 {
+        transform: translateX(-12610px);
+      }
+      .p12-1 {
+        transform: translateX(-12605px);
+      }
+      .p12-2 {
+        transform: translateX(-12628px);
+      }
+      .p12-3 {
+        transform: translateX(-12613px);
+      }
+      .p12-4 {
+        transform: translateX(-12629px);
+      }
+      .p12-5 {
+        transform: translateX(-12597px);
+      }
+      .p12-6 {
+        transform: translateX(-12657px);
+      }
+      .p12-7 {
+        transform: translateX(-12778px);
+      }
+      .p12-8 {
+        transform: translateX(-12793px);
+      }
+      .p12-9 {
+        transform: translateX(-12812px);
+      }
+      .p13-0 {
+        transform: translateX(-13650px);
+      }
+      .p13-1 {
+        transform: translateX(-13645px);
+      }
+      .p13-2 {
+        transform: translateX(-13668px);
+      }
+      .p13-3 {
+        transform: translateX(-13653px);
+      }
+      .p13-4 {
+        transform: translateX(-13669px);
+      }
+      .p13-5 {
+        transform: translateX(-13637px);
+      }
+      .p13-6 {
+        transform: translateX(-13697px);
+      }
+      .p13-7 {
+        transform: translateX(-13818px);
+      }
+      .p13-8 {
+        transform: translateX(-13833px);
+      }
+      .p13-9 {
+        transform: translateX(-13852px);
+      }
+      .p14-0 {
+        transform: translateX(-14690px);
+      }
+      .p14-1 {
+        transform: translateX(-14685px);
+      }
+      .p14-2 {
+        transform: translateX(-14708px);
+      }
+      .p14-3 {
+        transform: translateX(-14693px);
+      }
+      .p14-4 {
+        transform: translateX(-14709px);
+      }
+      .p14-5 {
+        transform: translateX(-14677px);
+      }
+      .p14-6 {
+        transform: translateX(-14737px);
+      }
+      .p14-7 {
+        transform: translateX(-14858px);
+      }
+      .p14-8 {
+        transform: translateX(-14873px);
+      }
+      .p14-9 {
+        transform: translateX(-14892px);
+      }
+      .p15-0 {
+        transform: translateX(-15730px);
+      }
+      .p15-1 {
+        transform: translateX(-15725px);
+      }
+      .p15-2 {
+        transform: translateX(-15748px);
+      }
+      .p15-3 {
+        transform: translateX(-15733px);
+      }
+      .p15-4 {
+        transform: translateX(-15749px);
+      }
+      .p15-5 {
+        transform: translateX(-15717px);
+      }
+      .p15-6 {
+        transform: translateX(-15777px);
+      }
+      .p15-7 {
+        transform: translateX(-15898px);
+      }
+      .p15-8 {
+        transform: translateX(-15913px);
+      }
+      .p15-9 {
+        transform: translateX(-15932px);
+      }
+      .p16-0 {
+        transform: translateX(-16770px);
+      }
+      .p16-1 {
+        transform: translateX(-16765px);
+      }
+      .p16-2 {
+        transform: translateX(-16788px);
+      }
+      .p16-3 {
+        transform: translateX(-16773px);
+      }
+      .p16-4 {
+        transform: translateX(-16789px);
+      }
+      .p16-5 {
+        transform: translateX(-16757px);
+      }
+      .p16-6 {
+        transform: translateX(-16817px);
+      }
+      .p16-7 {
+        transform: translateX(-16938px);
+      }
+      .p16-8 {
+        transform: translateX(-16953px);
+      }
+      .p16-9 {
+        transform: translateX(-16972px);
+      }
+      .p17-0 {
+        transform: translateX(-17810px);
+      }
+      .p17-1 {
+        transform: translateX(-17805px);
+      }
+      .p17-2 {
+        transform: translateX(-17828px);
+      }
+      .p17-3 {
+        transform: translateX(-17813px);
+      }
+      .p17-4 {
+        transform: translateX(-17829px);
+      }
+      .p17-5 {
+        transform: translateX(-17797px);
+      }
+      .p17-6 {
+        transform: translateX(-17857px);
+      }
+      .p17-7 {
+        transform: translateX(-17978px);
+      }
+      .p17-8 {
+        transform: translateX(-17993px);
+      }
+      .p17-9 {
+        transform: translateX(-18012px);
+      }
+      .p18-0 {
+        transform: translateX(-18850px);
+      }
+      .p18-1 {
+        transform: translateX(-18845px);
+      }
+      .p18-2 {
+        transform: translateX(-18868px);
+      }
+      .p18-3 {
+        transform: translateX(-18853px);
+      }
+      .p18-4 {
+        transform: translateX(-18869px);
+      }
+      .p18-5 {
+        transform: translateX(-18837px);
+      }
+      .p18-6 {
+        transform: translateX(-18897px);
+      }
+      .p18-7 {
+        transform: translateX(-19018px);
+      }
+      .p18-8 {
+        transform: translateX(-19033px);
+      }
+      .p18-9 {
+        transform: translateX(-19052px);
+      }
+      .p19-0 {
+        transform: translateX(-19890px);
+      }
+      .p19-1 {
+        transform: translateX(-19885px);
+      }
+      .p19-2 {
+        transform: translateX(-19908px);
+      }
+      .p19-3 {
+        transform: translateX(-19893px);
+      }
+      .p19-4 {
+        transform: translateX(-19909px);
+      }
+      .p19-5 {
+        transform: translateX(-19877px);
+      }
+      .p19-6 {
+        transform: translateX(-19937px);
+      }
+      .p19-7 {
+        transform: translateX(-20058px);
+      }
+      .p19-8 {
+        transform: translateX(-20073px);
+      }
+      .p19-9 {
+        transform: translateX(-20092px);
+      }
+      .p20-0 {
+        transform: translateX(-20930px);
+      }
+      .p20-1 {
+        transform: translateX(-20925px);
+      }
+      .p20-2 {
+        transform: translateX(-20948px);
+      }
+      .p20-3 {
+        transform: translateX(-20933px);
+      }
+      .p20-4 {
+        transform: translateX(-20949px);
+      }
+      .p20-5 {
+        transform: translateX(-20917px);
+      }
+      .p20-6 {
+        transform: translateX(-20977px);
+      }
+      .p20-7 {
+        transform: translateX(-21098px);
+      }
+      .p20-8 {
+        transform: translateX(-21113px);
+      }
+      .p20-9 {
+        transform: translateX(-21132px);
+      }
+      .btn {
+        position: absolute;
+        left: 108px;
+        top: 416px;
+        width: 384px;
+        height: 56px;
+        border: 4px solid #fff;
+        border-radius: 12px;
+        background: linear-gradient(92deg,#bcec30 0%,#7ac100 188%);
+        background-clip: padding-box;
+        color: #091e2a;
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .sep {
+        position: relative;
+        margin: 40px 56px 0;
+      }
+      .sep-img {
+        position: absolute;
+        left: -39px;
+        top: -37px;
+        z-index: 2;
+        width: 151px;
+        height: 131px;
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/7d049a84-0c65-464b-9cca-83e4364abf51.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .sep-card {
+        position: relative;
+        margin: -3px 26px 0;
+        background: #fff;
+        border-radius: 23px;
+        padding: 27px 20px 16px;
+        text-align: center;
+      }
+      .sep-h {
+        display: inline-block;
+        margin: 0 0 2px;
+        padding-bottom: 3px;
+        font-size: 24px;
+        line-height: 22px;
+        font-weight: 700;
+        border-bottom: 3px solid #00c1ff;
+      }
+      .sep-t {
+        margin: 0;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .nps {
+        margin: 24px 24px 0;
+        text-align: center;
+        line-height: 0;
+      }
+      .nps-q {
+        margin: 0 0 16px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #000;
+      }
+      .nps a {
+        display: inline-block;
+        margin: 0 12px;
+        text-decoration: none;
+        vertical-align: top;
+      }
+      .ftr {
+        margin: 24px 24px 0;
+        padding-top: 16px;
+        text-align: center;
+      }
+      .ftr-logo {
+        margin: 0 0 12px;
+        line-height: 0;
+      }
+      .ftr-care {
+        margin: 0 0 6px;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+        color: #04121b;
+      }
+      .ftr-brand {
+        margin: 0 0 17px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #999;
+      }
+      .ftr-card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 11px 20px 17px;
+      }
+      .ftr-app {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #00aefa;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .ftr-app amp-img {
+        vertical-align: middle;
+        margin-right: 6px;
+      }
+      .ftr-ask {
+        margin: 20px 0 8px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #858585;
+      }
+      .ftr-ask a {
+        color: #858585;
+        text-decoration: underline;
+      }
+      .soc a {
+        display: inline-block;
+        margin: 0 6px;
+        line-height: 0;
+      }
+      .ftr-legal {
+        margin: 16px 0 0;
+        font-size: 12px;
+        line-height: 16px;
+        color: #999;
+      }
+      .ftr-legal b {
+        font-weight: 700;
+      }
+      .ftr-legal a {
+        color: #999;
+        text-decoration: underline;
+      }
+      .ftr-open {
+        margin: 16px 0 15px;
+        font-size: 12px;
+        line-height: 16px;
+      }
+      .ftr-open a {
+        color: #999;
+        text-decoration: underline;
+      }
+      .ovl {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 7;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        transform: scale(0);
+        transition-property: transform;
+        transition-duration: 0ms;
+      }
+      .ovl.show {
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 4300ms;
+        transition-timing-function: steps(1, end);
+      }
+      .dim {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        opacity: 0;
+        cursor: pointer;
+        transition-property: opacity;
+        transition-duration: 200ms;
+      }
+      .ovl.show .dim {
+        opacity: 0.45;
+        transition-property: opacity;
+        transition-duration: 500ms;
+        transition-delay: 4300ms;
+      }
+      .pop {
+        position: absolute;
+        left: 42px;
+        right: 42px;
+        top: 488px;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 200ms;
+      }
+      .ovl.show .pop {
+        opacity: 1;
+        transition-property: opacity;
+        transition-duration: 500ms;
+        transition-delay: 4300ms;
+      }
+      .pop-badge {
+        width: 74px;
+        height: 74px;
+        margin: 0 auto -15px;
+        position: relative;
+        z-index: 3;
+        background-size: 100% 100%;
+      }
+      .b0 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/9440ddaf-0bd0-4882-9d81-44fa3bc62fed.png");
+      }
+      .b1 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/3bf24665-084d-4f04-8935-0988ab2af118.png");
+      }
+      .b2 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/d7a5b169-ce48-462e-ba32-aa3680510121.png");
+      }
+      .b3 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/f3ae96eb-8a09-4cde-bf7d-be388c700745.png");
+      }
+      .b4 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/f51c1f8a-9c1c-4488-bb82-590bee186d32.png");
+      }
+      .b5 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/b75547a1-5993-4397-b812-302e8dc9e195.png");
+      }
+      .b6 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/94d55ea6-be16-4933-81f4-d4889e718332.png");
+      }
+      .b7 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/da5f4c07-e6a6-4565-b279-be0ebdd8b710.png");
+      }
+      .b8 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/63e22fd2-155b-4a16-a50b-01fcb6439ad3.png");
+      }
+      .b9 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/2332f4a8-1f4a-4b5f-9bdd-aa018d46081e.png");
+      }
+      .pop-head {
+        position: relative;
+        padding: 33px 24px 35px;
+        text-align: center;
+        color: #fff;
+      }
+      .pop-plate {
+        position: absolute;
+        top: 0;
+        left: 5px;
+        right: 5px;
+        bottom: 0;
+        background: #d571ff;
+        border-radius: 24px;
+        transform: rotate(-2deg);
+      }
+      .pop-title {
+        position: relative;
+        margin: 0 0 12px;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 700;
+      }
+      .pop-sub {
+        position: relative;
+        margin: 0;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .x {
+        position: absolute;
+        right: 30px;
+        top: -20px;
+        width: 24px;
+        height: 24px;
+        z-index: 4;
+        cursor: pointer;
+        border-radius: 50%;
+        transition-property: box-shadow;
+        transition-duration: 150ms;
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/f976087e-d478-4801-892e-feeb5dcfe047.png");
+        background-size: 100% 100%;
+      }
+      .x:hover {
+        box-shadow: 0 0 0 5px rgba(255,255,255,.35);
+      }
+      .pop-sheet {
+        position: relative;
+        z-index: 2;
+        margin-top: -38px;
+        padding: 15% 12% 9% 12%;
+        text-align: center;
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/29e1a553-e46b-42a0-b3b4-5700e968b7dc.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .pop-foot {
+        position: absolute;
+        right: -2%;
+        top: 7%;
+        width: 21%;
+        height: 0;
+        padding-bottom: 19.6%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .f0 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/a567da66-4e80-4269-b7fb-a20087e4050a.png");
+      }
+      .f1 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/c68a8415-522d-44f8-9c6d-67631453030d.png");
+      }
+      .f2 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/758558a1-3b1d-4c93-b9aa-3ff95fdf7324.png");
+      }
+      .f3 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/e6575cf5-e204-444a-b125-e90da876c714.png");
+      }
+      .f4 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/421c2979-c583-4e52-aedd-0f1718bcaa45.png");
+      }
+      .f5 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/87e058ea-c619-4ad5-9852-a2250ea8bfe4.png");
+      }
+      .f6 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/1a34ef8a-2949-4667-aff1-05f9e0981781.png");
+      }
+      .f7 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/251f6d7b-c364-42fa-98f1-a73a7bc6dd0f.png");
+      }
+      .f8 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/fb3ce90e-840f-44a8-ad28-e862bacde5a6.png");
+      }
+      .f9 {
+        background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/e5907e6a-c6ac-474e-b89f-1a30e3cbdc02.png");
+      }
+      .pop-idiom {
+        max-width: 360px;
+        margin: 0 auto 20px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .cta {
+        display: block;
+        width: 314px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 11px 0;
+        border-radius: 10px;
+        background: #00c1ff;
+        color: #fff;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .cta2 {
+        display: block;
+        width: 314px;
+        max-width: 100%;
+        margin: 8px auto 0;
+        padding: 11px 0;
+        border: 0;
+        background: none;
+        color: #00c1ff;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      @media (max-width:599px) {
+        .hdr {
+          margin: 16px 16px 0;
+          padding: 14px 16px;
+        }
+        .hdr-note {
+          font-size: 12px;
+          line-height: 12px;
+        }
+        .h1box {
+          margin-top: 24px;
+          padding: 0 0 11px;
+        }
+        .h1 {
+          padding: 0 30px;
+          font-size: 32px;
+          line-height: 37px;
+        }
+        .dec-bolt {
+          left: 0;
+          top: -25px;
+          width: 40px;
+          height: 69px;
+        }
+        .dec-heart {
+          right: 6px;
+          top: -4px;
+          width: 24px;
+          height: 24px;
+        }
+        .dec-wave {
+          right: 44px;
+          top: 38px;
+          width: 76px;
+          height: 8px;
+        }
+        .txt {
+          padding: 0 16px;
+          font-size: 16px;
+          line-height: 22px;
+        }
+        .promo {
+          margin: 0 16px;
+          padding: 17px 19px;
+          border-radius: 20px;
+        }
+        .stage {
+          width: 340px;
+          height: 420px;
+          margin: 24px auto 0;
+          background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/91c2c7aa-d7ed-4fe5-8a45-efeda03d1a77.png");
+          background-size: 340px 420px;
+        }
+        .globe {
+          left: 66px;
+          top: 30px;
+          transform: scale(0.8154);
+          transform-origin: 0 0;
+          box-shadow: 0 12px 26px rgba(11,43,74,.32);
+        }
+        .btn {
+          left: 16px;
+          right: auto;
+          top: 340px;
+          bottom: auto;
+          width: 308px;
+          height: 54px;
+          font-size: 20px;
+        }
+        .sep {
+          margin: 40px 16px 0;
+          padding-top: 61px;
+        }
+        .sep-img {
+          left: 50%;
+          margin-left: -75px;
+          top: -29px;
+          width: 151px;
+          height: 131px;
+        }
+        .sep-card {
+          margin: 0;
+          padding: 57px 16px 16px;
+        }
+        .sep-h {
+          font-size: 24px;
+          line-height: 22px;
+        }
+        .nps {
+          margin: 24px 16px 0;
+        }
+        .ftr {
+          margin: 24px 16px 0;
+        }
+        .ftr-app {
+          font-size: 16px;
+        }
+      }
+      @media (max-width:520px) {
+        .pop {
+          left: 4px;
+          right: 4px;
+        }
+        .pop-plate {
+          left: 6px;
+          right: 6px;
+          border-radius: 16px;
+        }
+        .pop-head {
+          padding: 27px 26px 52px;
+        }
+        .pop-title {
+          font-size: 20px;
+          line-height: 24px;
+        }
+        .pop-sub {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        .pop-badge {
+          margin: 0 auto -19px;
+        }
+        .x {
+          right: 30px;
+          top: -18px;
+        }
+        .pop-sheet {
+          margin-top: -49px;
+          padding: 25% 12.35% 21.2%;
+          background-image: url("https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/7568ec10-3afc-499d-8c9d-1aa5c0d6a99c.png");
+        }
+        .pop-foot {
+          right: 1%;
+          top: 41px;
+          width: 25%;
+          padding-bottom: 22.4%;
+        }
+        .pop-idiom {
+          max-width: 222px;
+          font-size: 16px;
+          line-height: 22px;
+        }
+        .cta,.cta2 {
+          width: 256px;
+        }
+      }
+      .ftr-legal {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <amp-state id="s">
+      <script type="application/json">{"i":0,"t":0,"o":0}</script>
+    </amp-state>
+    <div class="email">
+      <div class="hdr">
+        <a href="https://skyeng.ru/?source_type=email&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=action_732%7Cadult_no_student%7Caction&amp;utm_term=header%7C01092026%7C&amp;workflow=Straight-old&amp;product=type-mainpage%7Cname-skyeng&amp;manager=pbarashkova">
+          <amp-img src="https://email-images.mindbox.ru/skyeng/77f4d0f4-17e9-47d0-af81-93a12934888c/a0236c1d-4507-41c2-b4e5-26b63d22a5ab.png" width="107" height="28" layout="fixed" alt="Skyeng"></amp-img>
+        </a>
+        <span class="hdr-note">С&nbsp;1 сентября!</span>
+      </div>
+      <div class="h1box">
+        <div class="dec dec-bolt"></div>
+        <div class="dec dec-heart"></div>
+        <p class="h1">Вращение&nbsp;— мать учения</p>
+        <div class="dec dec-wave"></div>
+      </div>
+      <div class="txts">
+        <p class="txt">Чтобы принять решение, всегда можно подбросить монетку. Или&nbsp;спросить у&nbsp;ИИ.&nbsp;Или&nbsp;крутануть школьный глобус&nbsp;— сегодня как&nbsp;раз 1 Сентября!</p>
+        <p class="txt">Раскручивайте макет планеты и&nbsp;узнайте первую идиому на&nbsp;иностранном языке уже сегодня.</p>
+        <div class="promo">Начинайте изучать новый язык со&nbsp;Skyeng и&nbsp;<b>скидкой до&nbsp;50% по&nbsp;промокоду СМОГУ</b>!</div>
+      </div>
+      <div class="stage">
+        <div class="globe" role="button" tabindex="0" on="tap:AMP.setState({s:{i: [0,7,3,9,5,2,8,4,6,1][(s.t + 1) % 10], t: s.t + 1, o: 1}})">
+          <div class="tilt">
+            <div class="lane p0-0" [class]="'lane p' + (s.t &lt; 20 ? s.t : 20) + '-' + s.i">
+              <div class="grid"></div>
+            </div>
+          </div>
+          <div class="shade"></div>
+        </div>
+        <button class="btn" on="tap:AMP.setState({s:{i: [0,7,3,9,5,2,8,4,6,1][(s.t + 1) % 10], t: s.t + 1, o: 1}})">Раскрутить глобус</button>
+      </div>
+      <div class="sep">
+        <div class="sep-img"></div>
+        <div class="sep-card">
+          <p class="sep-h">С&nbsp;1 Сентября</p>
+          <p class="sep-t">Желаем вам успехов<br>в&nbsp;освоении новых навыков</p>
+        </div>
+      </div>
+      <div class="nps">
+        <p class="nps-q">Как&nbsp;вам такая учёба?</p>
+        <a href="https://a28395.webask.io/g44g6hi43?user_id=adult_no_student&amp;utm_campaign=action_732amp">
+          <amp-img src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/51958f58-f23a-416a-a773-8d43c9e6075c.png" width="110" height="80" layout="fixed" alt="Прогулять"></amp-img>
+        </a>
+        <a href="https://a28395.webask.io/nqcoepqcb?user_id=adult_no_student&amp;utm_campaign=action_732amp">
+          <amp-img src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/6da555f2-4cf5-4b1c-bb40-aed31c232818.png" width="110" height="80" layout="fixed" alt="Давайте ещё!"></amp-img>
+        </a>
+      </div>
+      <div class="ftr">
+        <p class="ftr-logo">
+          <amp-img src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/f20381bd-57e5-4ef2-9d22-a8aa9f20f579.png" width="58" height="40" layout="fixed" alt="Skyeng"></amp-img>
+        </p>
+        <p class="ftr-care">С&nbsp;заботой о&nbsp;ваших результатах</p>
+        <p class="ftr-brand">Skyeng</p>
+        <div class="ftr-card">
+          <a class="ftr-app" href="https://skyeng.onelink.me/Egus/?af_sub1=email&amp;af_sub2=vmanoylova&amp;af_sub3=adults&amp;af_sub5=-&amp;af_sub4=type-mobile_app|name-newsletter&amp;pid=email&amp;af_channel=email">
+            <amp-img src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/e0d9f6c8-bd8b-4778-8f81-c62c88be8870.png" width="24" height="24" layout="fixed" alt=""></amp-img>
+            Скачать приложение Skyeng
+          </a>
+          <p class="ftr-ask">Задайте вопрос <a href="https://skyeng.ru/?source_type=email&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=action_732%7Cadult_no_student%7Caction&amp;utm_term=footer%7C01092026%7C&amp;workflow=Straight-old&amp;product=type-mainpage%7Cname-skyeng&amp;manager=pbarashkova">на&nbsp;сайте</a> или&nbsp;свяжитесь с&nbsp;нами:</p>
+          <div class="soc">
+            <a href="https://vk.com/skyeng">
+              <amp-img src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/884dcbb9-5c1b-41a1-8dec-ddd4aa463b4a.png" width="32" height="32" layout="fixed" alt="VK"></amp-img>
+            </a>
+            <a href="https://www.youtube.com/user/skyengschool">
+              <amp-img src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/1c5cfdb0-c3e4-4fe0-b102-37ebdf1a5848.png" width="32" height="32" layout="fixed" alt="YouTube"></amp-img>
+            </a>
+            <a href="https://tlgg.ru/skyengweekly">
+              <amp-img src="https://email-images.mindbox.ru/skyeng/5926e6c1-17fd-4cc2-9f41-a5dd875ad0bb/7d76f0f0-957e-4a74-912a-fef07795c4cd.png" width="32" height="32" layout="fixed" alt="Telegram"></amp-img>
+            </a>
+          </div>
+        </div>
+        <p class="ftr-legal"><b>Вы&nbsp;получили это письмо, так как&nbsp;подписаны на&nbsp;рассылку от&nbsp;Skyeng.</b><br> Чтобы отписаться, перейдите <a href="${Message.TopicUnsubscribeLink}">по&nbsp;ссылке</a>. Данное предложение не&nbsp;является офертой.</p>
+        <p class="ftr-open"><a href="https://skyeng.ru/">Открыть в&nbsp;браузере</a></p>
+      </div>
+      <div class="ovl" [class]="s.o == 1 &amp;&amp; s.i == 0 ? 'ovl show' : 'ovl'">
+        <div class="dim" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></div>
+        <div class="pop">
+          <div class="pop-badge b0"></div>
+          <div class="pop-head">
+            <div class="pop-plate"></div>
+            <span class="x" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></span>
+            <p class="pop-title">Глобус остановился на&nbsp;Великобритании</p>
+            <p class="pop-sub">А&nbsp;значит, вам стоит изучать английский&nbsp;— главный язык международного общения!</p>
+          </div>
+          <div class="pop-sheet">
+            <div class="pop-foot f0"></div>
+            <p class="pop-idiom">Готовы <b>to&nbsp;hit the&nbsp;books</b> (идиом. серьёзно взяться за&nbsp;занятия)? Тогда применяйте промокод <b>СМОГУ</b> и&nbsp;скорее начинайте учиться <b>со&nbsp;скидкой до&nbsp;50%</b>.</p>
+            <a class="cta" href="https://skyeng.ru/?source_type=email&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=action_732%7Cadult_no_student%7Caction&amp;utm_term=button%7C01092026%7C&amp;workflow=Straight-new&amp;product=type-skyeng_action|name-backtoschool26&amp;manager=pbarashkova&amp;promocode=СМОГУ">Учить английский</a> <button class="cta2" on="tap:AMP.setState({s:{i: [0,7,3,9,5,2,8,4,6,1][(s.t + 1) % 10], t: s.t + 1, o: 1}})">Раскрутить глобус снова</button>
+          </div>
+        </div>
+      </div>
+      <div class="ovl" [class]="s.o == 1 &amp;&amp; s.i == 1 ? 'ovl show' : 'ovl'">
+        <div class="dim" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></div>
+        <div class="pop">
+          <div class="pop-badge b1"></div>
+          <div class="pop-head">
+            <div class="pop-plate"></div>
+            <span class="x" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></span>
+            <p class="pop-title">Глобус остановился на&nbsp;Испании</p>
+            <p class="pop-sub">Официальный язык этой страны&nbsp;— испанский. И&nbsp;это второй по&nbsp;числу носителей язык в&nbsp;мире!</p>
+          </div>
+          <div class="pop-sheet">
+            <div class="pop-foot f1"></div>
+            <p class="pop-idiom">В&nbsp;испанском есть интересное слово <b>empollar</b>. Оно означает «высиживать яйца», а&nbsp;ещё «усердно учить, зубрить». Впрочем, <b>no hay que empollar los libros de texto</b> (не&nbsp;нужно корпеть над&nbsp;учебниками)! Применяйте промокод <b>СМОГУ</b> и&nbsp;занимайтесь испанским с&nbsp;удовольствием и&nbsp;<b>скидкой до&nbsp;50%</b>!</p>
+            <a class="cta" href="https://skyeng.ru/yazykovye-kursy/ispanskij/?source_type=email&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=action_732%7Cadult_no_student%7Caction&amp;utm_term=button%7C01092026%7C&amp;workflow=Straight-new&amp;product=type-skyeng_action|name-backtoschool26&amp;manager=pbarashkova&amp;promocode=СМОГУ">Учить испанский</a> <button class="cta2" on="tap:AMP.setState({s:{i: [0,7,3,9,5,2,8,4,6,1][(s.t + 1) % 10], t: s.t + 1, o: 1}})">Раскрутить глобус снова</button>
+          </div>
+        </div>
+      </div>
+      <div class="ovl" [class]="s.o == 1 &amp;&amp; s.i == 2 ? 'ovl show' : 'ovl'">
+        <div class="dim" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></div>
+        <div class="pop">
+          <div class="pop-badge b2"></div>
+          <div class="pop-head">
+            <div class="pop-plate"></div>
+            <span class="x" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></span>
+            <p class="pop-title">Глобус остановился на&nbsp;Италии</p>
+            <p class="pop-sub">А&nbsp;значит, вам стоит изучать итальянский&nbsp;— древнейший язык музыки, кулинарии и&nbsp;архитектуры!</p>
+          </div>
+          <div class="pop-sheet">
+            <div class="pop-foot f2"></div>
+            <p class="pop-idiom">Мы не&nbsp;сторонники того, чтобы <b>sgobbare</b> (идиом. упахиваться, корпеть) над&nbsp;учебниками и&nbsp;упражнениями. Ведь гораздо полезнее учится с&nbsp;удовольствием и&nbsp;<b>скидкой до&nbsp;50%</b> по&nbsp;промокоду <b>СМОГУ</b>!</p>
+            <a class="cta" href="https://skyeng.ru/yazykovye-kursy/italyanskij/?source_type=email&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=action_732%7Cadult_no_student%7Caction&amp;utm_term=button%7C01092026%7C&amp;workflow=Straight-new&amp;product=type-skyeng_action|name-backtoschool26&amp;manager=pbarashkova&amp;promocode=СМОГУ">Учить итальянский</a> <button class="cta2" on="tap:AMP.setState({s:{i: [0,7,3,9,5,2,8,4,6,1][(s.t + 1) % 10], t: s.t + 1, o: 1}})">Раскрутить глобус снова</button>
+          </div>
+        </div>
+      </div>
+      <div class="ovl" [class]="s.o == 1 &amp;&amp; s.i == 3 ? 'ovl show' : 'ovl'">
+        <div class="dim" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></div>
+        <div class="pop">
+          <div class="pop-badge b3"></div>
+          <div class="pop-head">
+            <div class="pop-plate"></div>
+            <span class="x" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></span>
+            <p class="pop-title">Глобус остановился на&nbsp;Франции</p>
+            <p class="pop-sub">А&nbsp;значит, вам стоит изучать французский&nbsp;— ещё один, помимо английского, язык, который присутствует на&nbsp;всех континентах!</p>
+          </div>
+          <div class="pop-sheet">
+            <div class="pop-foot f3"></div>
+            <p class="pop-idiom">Во французском есть интересное слово <b>bûcher</b>. Оно означает «костёр», «сарай», а&nbsp;ещё&nbsp;— «усердно учить и&nbsp;сдавать (экзамены)». Впрочем, <b>il ne faut pas bûcher par cœur pour parler français</b> (необязательно зубрить, чтобы заговорить по-французски)!</p>
+            <a class="cta" href="https://skyeng.ru/yazykovye-kursy/francuzskij/?source_type=email&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=action_732%7Cadult_no_student%7Caction&amp;utm_term=button%7C01092026%7C&amp;workflow=Straight-new&amp;product=type-skyeng_action|name-backtoschool26&amp;manager=pbarashkova&amp;promocode=СМОГУ">Учить французский</a> <button class="cta2" on="tap:AMP.setState({s:{i: [0,7,3,9,5,2,8,4,6,1][(s.t + 1) % 10], t: s.t + 1, o: 1}})">Раскрутить глобус снова</button>
+          </div>
+        </div>
+      </div>
+      <div class="ovl" [class]="s.o == 1 &amp;&amp; s.i == 4 ? 'ovl show' : 'ovl'">
+        <div class="dim" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></div>
+        <div class="pop">
+          <div class="pop-badge b4"></div>
+          <div class="pop-head">
+            <div class="pop-plate"></div>
+            <span class="x" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></span>
+            <p class="pop-title">Глобус остановился на&nbsp;Германии</p>
+            <p class="pop-sub">А&nbsp;значит, вам стоит изучать немецкий&nbsp;— самый распространённый языке в&nbsp;Европейском союзе по&nbsp;числу носителей!</p>
+          </div>
+          <div class="pop-sheet">
+            <div class="pop-foot f4"></div>
+            <p class="pop-idiom">Новичку непросто понять немецкий, ведь в&nbsp;этом языке очень много устойчивых выражений. Например, «<b>Ich verstehe nur Bahnhof</b>» дословно переводится как&nbsp;«Я&nbsp;понимаю только слово «вокзал»». Но&nbsp;на&nbsp;самом деле означает «Я&nbsp;ничего не&nbsp;понимаю». На&nbsp;первое время вам пригодится!</p>
+            <a class="cta" href="https://skyeng.ru/yazykovye-kursy/nemeckij/?source_type=email&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=action_732%7Cadult_no_student%7Caction&amp;utm_term=button%7C01092026%7C&amp;workflow=Straight-new&amp;product=type-skyeng_action|name-backtoschool26&amp;manager=pbarashkova&amp;promocode=СМОГУ">Учить немецкий</a> <button class="cta2" on="tap:AMP.setState({s:{i: [0,7,3,9,5,2,8,4,6,1][(s.t + 1) % 10], t: s.t + 1, o: 1}})">Раскрутить глобус снова</button>
+          </div>
+        </div>
+      </div>
+      <div class="ovl" [class]="s.o == 1 &amp;&amp; s.i == 5 ? 'ovl show' : 'ovl'">
+        <div class="dim" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></div>
+        <div class="pop">
+          <div class="pop-badge b5"></div>
+          <div class="pop-head">
+            <div class="pop-plate"></div>
+            <span class="x" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></span>
+            <p class="pop-title">Глобус остановился на&nbsp;Португалии</p>
+            <p class="pop-sub">А&nbsp;значит, вам стоит стать лузофоном! Так называют носителя португальского языка (от&nbsp;названия римской провинции Лузитания и&nbsp;древнегреческого φωνή&nbsp;— «звук»).</p>
+          </div>
+          <div class="pop-sheet">
+            <div class="pop-foot f5"></div>
+            <p class="pop-idiom">В&nbsp;португальском есть выражение <b>queimar as pestanas.</b> Дословно оно переводится как&nbsp;«жечь ресницы» и&nbsp;означает «усердно учиться/работать», часто допоздна. Мы, конечно, ценим усердие, но&nbsp;в&nbsp;обучении предпочитаем мягкий подход.</p>
+            <a class="cta" href="https://skyeng.ru/yazykovye-kursy/portugalskij/?source_type=email&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=action_732%7Cadult_no_student%7Caction&amp;utm_term=button%7C01092026%7C&amp;workflow=Straight-new&amp;product=type-skyeng_action|name-backtoschool26&amp;manager=pbarashkova&amp;promocode=СМОГУ">Учить португальский</a> <button class="cta2" on="tap:AMP.setState({s:{i: [0,7,3,9,5,2,8,4,6,1][(s.t + 1) % 10], t: s.t + 1, o: 1}})">Раскрутить глобус снова</button>
+          </div>
+        </div>
+      </div>
+      <div class="ovl" [class]="s.o == 1 &amp;&amp; s.i == 6 ? 'ovl show' : 'ovl'">
+        <div class="dim" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></div>
+        <div class="pop">
+          <div class="pop-badge b6"></div>
+          <div class="pop-head">
+            <div class="pop-plate"></div>
+            <span class="x" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></span>
+            <p class="pop-title">Глобус остановился на&nbsp;Турции</p>
+            <p class="pop-sub">А&nbsp;значит, вам стоит изучать турецкий! В&nbsp;этом языке много форм и&nbsp;диалектов, а&nbsp;в&nbsp;деревне Kuşköy (тур. Птичья деревня) даже есть свой птичий язык! В&nbsp;нём слова передают с&nbsp;помощью свиста, похожего на&nbsp;пение птиц.</p>
+          </div>
+          <div class="pop-sheet">
+            <div class="pop-foot f6"></div>
+            <p class="pop-idiom">В&nbsp;классическом турецком свиста нет, зато есть много разговорных словечек. Например, вместо английского «окей» используют <b>tamam</b>.</p>
+            <a class="cta" href="https://skyeng.ru/yazykovye-kursy/tureckij/?source_type=email&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=action_732%7Cadult_no_student%7Caction&amp;utm_term=button%7C01092026%7C&amp;workflow=Straight-new&amp;product=type-skyeng_action|name-backtoschool26&amp;manager=pbarashkova&amp;promocode=СМОГУ">Учить турецкий</a> <button class="cta2" on="tap:AMP.setState({s:{i: [0,7,3,9,5,2,8,4,6,1][(s.t + 1) % 10], t: s.t + 1, o: 1}})">Раскрутить глобус снова</button>
+          </div>
+        </div>
+      </div>
+      <div class="ovl" [class]="s.o == 1 &amp;&amp; s.i == 7 ? 'ovl show' : 'ovl'">
+        <div class="dim" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></div>
+        <div class="pop">
+          <div class="pop-badge b7"></div>
+          <div class="pop-head">
+            <div class="pop-plate"></div>
+            <span class="x" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></span>
+            <p class="pop-title">Глобус остановился на&nbsp;Китае</p>
+            <p class="pop-sub">А&nbsp;значит, вам стоит изучать китайский! В&nbsp;этом языке нет склонений, спряжений, родов, падежей, артиклей и&nbsp;привычной нам системы времён, зато... интонация полностью меняет смысл слова!</p>
+          </div>
+          <div class="pop-sheet">
+            <div class="pop-foot f7"></div>
+            <p class="pop-idiom">В&nbsp;китайском языке много устойчивых выражений. Например, 临时抱佛脚 (lín shí bào fó jiǎo) означает «ухватиться за&nbsp;ноги Будды в&nbsp;последний момент».</p>
+            <a class="cta" href="https://skyeng.ru/yazykovye-kursy/kitajskij/?source_type=email&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=action_732%7Cadult_no_student%7Caction&amp;utm_term=button%7C01092026%7C&amp;workflow=Straight-new&amp;product=type-skyeng_action|name-backtoschool26&amp;manager=pbarashkova&amp;promocode=СМОГУ">Учить китайский</a> <button class="cta2" on="tap:AMP.setState({s:{i: [0,7,3,9,5,2,8,4,6,1][(s.t + 1) % 10], t: s.t + 1, o: 1}})">Раскрутить глобус снова</button>
+          </div>
+        </div>
+      </div>
+      <div class="ovl" [class]="s.o == 1 &amp;&amp; s.i == 8 ? 'ovl show' : 'ovl'">
+        <div class="dim" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></div>
+        <div class="pop">
+          <div class="pop-badge b8"></div>
+          <div class="pop-head">
+            <div class="pop-plate"></div>
+            <span class="x" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></span>
+            <p class="pop-title">Глобус остановился на&nbsp;Южной Корее</p>
+            <p class="pop-sub">А&nbsp;значит, вам стоит изучать корейский! В&nbsp;этом языке удивительная система письма: форма согласных букв повторяет положение органов речи при&nbsp;произнесении звуков (например, ㄴ напоминает изогнутый язык у&nbsp;нёба).</p>
+          </div>
+          <div class="pop-sheet">
+            <div class="pop-foot f8"></div>
+            <p class="pop-idiom">В&nbsp;корейском языке есть выражение 벼락치기 (byeorakchigi). Дословно оно переводится как&nbsp;«удар молнии», но&nbsp;в&nbsp;Корее так называют зубрёжку в&nbsp;последний момент, например перед экзаменом.</p>
+            <a class="cta" href="https://skyeng.ru/yazykovye-kursy/korejskij/?source_type=email&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=action_732%7Cadult_no_student%7Caction&amp;utm_term=button%7C01092026%7C&amp;workflow=Straight-new&amp;product=type-skyeng_action|name-backtoschool26&amp;manager=pbarashkova&amp;promocode=СМОГУ">Учить корейский</a> <button class="cta2" on="tap:AMP.setState({s:{i: [0,7,3,9,5,2,8,4,6,1][(s.t + 1) % 10], t: s.t + 1, o: 1}})">Раскрутить глобус снова</button>
+          </div>
+        </div>
+      </div>
+      <div class="ovl" [class]="s.o == 1 &amp;&amp; s.i == 9 ? 'ovl show' : 'ovl'">
+        <div class="dim" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></div>
+        <div class="pop">
+          <div class="pop-badge b9"></div>
+          <div class="pop-head">
+            <div class="pop-plate"></div>
+            <span class="x" role="button" tabindex="0" on="tap:AMP.setState({s:{o: 0}})"></span>
+            <p class="pop-title">Глобус остановился на&nbsp;Японии</p>
+            <p class="pop-sub">А&nbsp;значит, вам стоит изучать японский! Этот язык считается одним из&nbsp;самых быстрых в&nbsp;мире: в&nbsp;нём произносят в&nbsp;среднем 7,84 слога в&nbsp;секунду (для&nbsp;сравнения в&nbsp;английском&nbsp;— 6,19).</p>
+          </div>
+          <div class="pop-sheet">
+            <div class="pop-foot f9"></div>
+            <p class="pop-idiom">В&nbsp;японском языке есть выражение 夜漬け (ichiyazuke). Так можно назвать и&nbsp;овощи, замаринованные всего на&nbsp;одну ночь, и&nbsp;зубрёжку в&nbsp;ночь перед экзаменом.</p>
+            <a class="cta" href="https://skyeng.ru/yazykovye-kursy/yaponskij/?source_type=email&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=action_732%7Cadult_no_student%7Caction&amp;utm_term=button%7C01092026%7C&amp;workflow=Straight-new&amp;product=type-skyeng_action|name-backtoschool26&amp;manager=pbarashkova&amp;promocode=СМОГУ">Учить японский</a> <button class="cta2" on="tap:AMP.setState({s:{i: [0,7,3,9,5,2,8,4,6,1][(s.t + 1) % 10], t: s.t + 1, o: 1}})">Раскрутить глобус снова</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
